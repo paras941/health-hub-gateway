@@ -1,0 +1,126 @@
+header {
+    background-color: #0b5ed7;
+    color: white;
+}
+
+nav a {
+    color: white;
+    font-weight: bold;
+    padding: 8px 2px;
+    opacity: 0.95;
+    transition: opacity 180ms ease, transform 180ms ease;
+}
+
+nav a:hover {
+    opacity: 1;
+    transform: translateY(-1px);
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 2px;
+    height: 2px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.85);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 200ms ease;
+}
+
+nav a:hover::after {
+    transform: scaleX(1);
+}
+
+.hero {
+    background: linear-gradient(to right, #0b5ed7, #5bc0de);
+    color: white;
+}
+
+/* Hero animated accents */
+.hero::before,
+.hero::after {
+    content: "";
+    position: absolute;
+    border-radius: 999px;
+    filter: blur(22px);
+    opacity: 0.65;
+    pointer-events: none;
+    animation: floaty 7s ease-in-out infinite;
+}
+
+.hero::before {
+    width: 320px;
+    height: 320px;
+    left: -120px;
+    top: -120px;
+    background: rgba(255, 255, 255, 0.22);
+}
+
+.hero::after {
+    width: 420px;
+    height: 420px;
+    right: -160px;
+    bottom: -180px;
+    background: rgba(255, 193, 7, 0.20);
+    animation-delay: -1.8s;
+}
+
+@keyframes floaty {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(10px, 14px) scale(1.04); }
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #ffc107;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: 800;
+    transition: transform 180ms ease, box-shadow 180ms ease, filter 180ms ease;
+}
+
+button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 24px rgba(0,0,0,0.16);
+    filter: brightness(1.03);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+.hero-badge {
+    background: rgba(255, 255, 255, 0.16);
+    border: 1px solid rgba(255, 255, 255, 0.24);
+}
+
+.card, .doctor-card {
+    background-color: #f8f9fa;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.card:hover, .doctor-card:hover {
+    box-shadow: 0 14px 30px rgba(0,0,0,0.14);
+}
+
+.highlight-card {
+    background: rgba(248, 249, 250, 0.9);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.10);
+}
+
+.highlight-card:hover {
+    box-shadow: 0 14px 30px rgba(0,0,0,0.14);
+}
+
+.emergency {
+    background-color: #dc3545;
+    color: white;
+}
+
+footer {
+    background-color: #343a40;
+    color: white;
+}

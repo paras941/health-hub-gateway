@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CityCare Multi-Specialty Hospital</title>
+
+    <!-- Multiple CSS files -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+    <header id="top" class="site-header">
+        <div class="menu-toggle">☰</div>
+        <div class="logo">CityCare Hospital</div>
+        <nav>
+            <a href="#top">Home</a>
+            <a href="#services">Services</a>
+            <a href="#doctors">Doctors</a>
+            <a href="#appointments">Appointments</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" aria-labelledby="heroTitle">
+        <div class="hero-inner">
+            <p class="hero-badge reveal">Trusted Care • Since 2008</p>
+            <h1 id="heroTitle" class="reveal">Your Health, Our Priority</h1>
+            <p class="reveal">24×7 Emergency | Expert Doctors | Advanced Care</p>
+            <div class="hero-actions reveal">
+                <button id="openModal" class="btn-primary">Book Appointment</button>
+                <a class="btn-ghost" href="#services">Explore Services</a>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="services" aria-labelledby="servicesTitle">
+        <h2 id="servicesTitle" class="reveal">Our Services</h2>
+        <div class="service-container">
+            <div class="card reveal" data-stagger>Cardiology</div>
+            <div class="card reveal" data-stagger>Neurology</div>
+            <div class="card reveal" data-stagger>Orthopedics</div>
+            <div class="card reveal" data-stagger>Pediatrics</div>
+        </div>
+    </section>
+
+    <!-- Doctors -->
+    <section id="doctors" class="doctors" aria-labelledby="doctorsTitle">
+        <h2 id="doctorsTitle" class="reveal">Our Specialists</h2>
+        <div class="doctor-container">
+            <div class="doctor-card reveal" data-stagger>
+                <h3>Dr. Sharma</h3>
+                <p>Cardiologist</p>
+            </div>
+            <div class="doctor-card reveal" data-stagger>
+                <h3>Dr. Mehta</h3>
+                <p>Neurologist</p>
+            </div>
+            <div class="doctor-card reveal" data-stagger>
+                <h3>Dr. Rao</h3>
+                <p>Orthopedic</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Highlights / Stats -->
+    <section class="highlights" aria-label="Hospital highlights">
+        <div class="highlight-grid">
+            <div class="highlight-card reveal" data-stagger>
+                <div class="stat" data-count="24">0</div>
+                <div class="label">Hours Emergency</div>
+            </div>
+            <div class="highlight-card reveal" data-stagger>
+                <div class="stat" data-count="50">0</div>
+                <div class="label">Specialists</div>
+            </div>
+            <div class="highlight-card reveal" data-stagger>
+                <div class="stat" data-count="10000">0</div>
+                <div class="label">Patients Served</div>
+            </div>
+            <div class="highlight-card reveal" data-stagger>
+                <div class="stat" data-count="12">0</div>
+                <div class="label">Departments</div>
+            </div>
+        </div>
+    </section>
+    
+
+<!-- Appointment Modal -->
+<div id="appointmentModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="appointmentTitle">
+    <div class="modal-content" role="document">
+        <span class="close">&times;</span>
+        <h2 id="appointmentTitle">Book Appointment</h2>
+        <form id="appointmentForm">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="tel" id="phone" placeholder="Phone Number" required>
+            <select id="department">
+                <option>Cardiology</option>
+                <option>Neurology</option>
+                <option>Orthopedics</option>
+                <option>Pediatrics</option>
+            </select>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</div>
+
+    <!-- Emergency -->
+    <section id="appointments" class="emergency" aria-labelledby="emergencyTitle">
+        <h2 id="emergencyTitle" class="reveal">Emergency Contact</h2>
+        <p>Call Now: <strong>+91 98765 43210</strong></p>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <p>© 2026 CityCare Hospital | All Rights Reserved</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>

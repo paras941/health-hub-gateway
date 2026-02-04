@@ -1,0 +1,289 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Hospital Website Design System */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@layer base {
+  :root {
+    /* Primary - Medical Teal */
+    --primary: 187 69% 42%;
+    --primary-foreground: 0 0% 100%;
+    
+    /* Secondary - Warm Coral for CTAs */
+    --secondary: 12 76% 61%;
+    --secondary-foreground: 0 0% 100%;
+    
+    /* Background & Surfaces */
+    --background: 200 20% 98%;
+    --foreground: 210 24% 16%;
+    
+    --card: 0 0% 100%;
+    --card-foreground: 210 24% 16%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 24% 16%;
+    
+    /* Muted & Accent */
+    --muted: 200 15% 94%;
+    --muted-foreground: 210 12% 45%;
+    
+    --accent: 187 35% 92%;
+    --accent-foreground: 187 69% 32%;
+    
+    /* Emergency Red */
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+    
+    /* Utility */
+    --border: 200 18% 88%;
+    --input: 200 18% 88%;
+    --ring: 187 69% 42%;
+    --radius: 0.75rem;
+    
+    /* Custom Hospital Colors */
+    --hospital-teal: 187 69% 42%;
+    --hospital-teal-light: 187 50% 95%;
+    --hospital-coral: 12 76% 61%;
+    --hospital-navy: 210 45% 22%;
+    --hospital-cream: 40 30% 96%;
+    --hospital-success: 152 69% 40%;
+    
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(187 69% 42%) 0%, hsl(210 45% 32%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(200 20% 98%) 100%);
+    --gradient-emergency: linear-gradient(90deg, hsl(0 72% 51%) 0%, hsl(0 72% 45%) 100%);
+    
+    /* Shadows */
+    --shadow-sm: 0 2px 8px -2px hsl(210 24% 16% / 0.08);
+    --shadow-md: 0 8px 24px -8px hsl(210 24% 16% / 0.12);
+    --shadow-lg: 0 16px 48px -12px hsl(210 24% 16% / 0.15);
+    --shadow-glow: 0 0 40px hsl(187 69% 42% / 0.2);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --primary: 187 69% 50%;
+    --primary-foreground: 0 0% 100%;
+    --background: 210 24% 10%;
+    --foreground: 200 20% 95%;
+    --card: 210 24% 14%;
+    --card-foreground: 200 20% 95%;
+    --muted: 210 20% 20%;
+    --muted-foreground: 200 15% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+@layer components {
+  .hospital-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .hospital-section {
+    @apply py-16 md:py-24;
+  }
+
+  .hospital-card {
+    @apply bg-card rounded-2xl p-6 transition-all duration-300;
+    box-shadow: var(--shadow-md);
+  }
+
+  .hospital-card:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-4px);
+  }
+
+  .hospital-btn-primary {
+    @apply inline-flex items-center justify-center px-8 py-4 rounded-xl font-semibold text-primary-foreground transition-all duration-300;
+    background: var(--gradient-hero);
+    box-shadow: var(--shadow-md);
+  }
+
+  .hospital-btn-primary:hover {
+    box-shadow: var(--shadow-glow);
+    transform: translateY(-2px);
+  }
+
+  .hospital-btn-secondary {
+    @apply inline-flex items-center justify-center px-8 py-4 rounded-xl font-semibold transition-all duration-300;
+    background: hsl(var(--hospital-coral));
+    color: white;
+    box-shadow: var(--shadow-md);
+  }
+
+  .hospital-btn-secondary:hover {
+    box-shadow: 0 8px 30px hsl(12 76% 61% / 0.35);
+    transform: translateY(-2px);
+  }
+
+  .hospital-btn-outline {
+    @apply inline-flex items-center justify-center px-8 py-4 rounded-xl font-semibold border-2 transition-all duration-300;
+    border-color: hsl(var(--primary));
+    color: hsl(var(--primary));
+  }
+
+  .hospital-btn-outline:hover {
+    background: hsl(var(--primary));
+    color: white;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl lg:text-5xl font-bold mb-4;
+    color: hsl(var(--hospital-navy));
+  }
+
+  .section-subtitle {
+    @apply text-lg md:text-xl max-w-2xl mx-auto;
+    color: hsl(var(--muted-foreground));
+  }
+
+  .emergency-banner {
+    background: var(--gradient-emergency);
+    @apply text-white py-3;
+  }
+
+  .service-icon {
+    @apply w-16 h-16 rounded-2xl flex items-center justify-center mb-4;
+    background: hsl(var(--hospital-teal-light));
+    color: hsl(var(--primary));
+  }
+
+  .doctor-card {
+    @apply bg-card rounded-3xl overflow-hidden transition-all duration-500;
+    box-shadow: var(--shadow-md);
+  }
+
+  .doctor-card:hover {
+    box-shadow: var(--shadow-lg);
+    transform: scale(1.02);
+  }
+
+  .doctor-card-image {
+    @apply w-full h-64 object-cover;
+  }
+
+  .nav-link {
+    @apply relative px-4 py-2 font-medium transition-colors duration-300;
+    color: hsl(var(--foreground));
+  }
+
+  .nav-link::after {
+    content: '';
+    @apply absolute bottom-0 left-1/2 w-0 h-0.5 transition-all duration-300;
+    background: hsl(var(--primary));
+    transform: translateX(-50%);
+  }
+
+  .nav-link:hover::after {
+    @apply w-full;
+  }
+
+  .nav-link:hover {
+    color: hsl(var(--primary));
+  }
+
+  .floating-element {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .pulse-element {
+    animation: pulse 2s ease-in-out infinite;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    background: var(--gradient-hero);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .bg-hero-gradient {
+    background: var(--gradient-hero);
+  }
+
+  .bg-hospital-cream {
+    background: hsl(var(--hospital-cream));
+  }
+
+  .text-hospital-navy {
+    color: hsl(var(--hospital-navy));
+  }
+
+  .text-hospital-teal {
+    color: hsl(var(--primary));
+  }
+
+  .bg-hospital-teal-light {
+    background: hsl(var(--hospital-teal-light));
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-in {
+  animation: slideInUp 0.6s ease-out forwards;
+}
+
+.animate-slide-in-delay-1 {
+  animation: slideInUp 0.6s ease-out 0.1s forwards;
+  opacity: 0;
+}
+
+.animate-slide-in-delay-2 {
+  animation: slideInUp 0.6s ease-out 0.2s forwards;
+  opacity: 0;
+}
+
+.animate-slide-in-delay-3 {
+  animation: slideInUp 0.6s ease-out 0.3s forwards;
+  opacity: 0;
+}
