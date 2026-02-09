@@ -1,12 +1,13 @@
 import { Phone, Mail, MapPin, Clock, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   const quickLinks = [
-    { name: 'About Us', href: '#about' },
-    { name: 'Our Services', href: '#services' },
-    { name: 'Our Doctors', href: '#doctors' },
-    { name: 'Appointments', href: '#appointment' },
-    { name: 'Contact Us', href: '#contact' },
+    { name: 'About Us', href: '/about' },
+    { name: 'Our Services', href: '/services' },
+    { name: 'Our Doctors', href: '/doctors' },
+    { name: 'Appointments', href: '/appointment' },
+    { name: 'Contact Us', href: '/contact' },
   ];
 
   const services = [
@@ -31,7 +32,7 @@ const Footer = () => {
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* About Column */}
           <div>
-            <div className="flex items-center gap-3 mb-6">
+            <Link to="/" className="flex items-center gap-3 mb-6">
               <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center">
                 <span className="text-2xl font-bold">+</span>
               </div>
@@ -39,7 +40,7 @@ const Footer = () => {
                 <h3 className="text-xl font-bold font-sans">MediCare</h3>
                 <p className="text-xs text-white/60">Multi-Specialty Hospital</p>
               </div>
-            </div>
+            </Link>
             <p className="text-white/70 text-sm leading-relaxed mb-6">
               Providing exceptional healthcare services with compassion and expertise. 
               Your health is our priority, and we're committed to delivering the best 
@@ -64,12 +65,12 @@ const Footer = () => {
             <ul className="space-y-3">
               {quickLinks.map((link) => (
                 <li key={link.name}>
-                  <a 
-                    href={link.href} 
+                  <Link 
+                    to={link.href} 
                     className="text-white/70 hover:text-primary transition-colors text-sm"
                   >
                     {link.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -81,12 +82,12 @@ const Footer = () => {
             <ul className="space-y-3">
               {services.map((service) => (
                 <li key={service}>
-                  <a 
-                    href="#services" 
+                  <Link 
+                    to="/services" 
                     className="text-white/70 hover:text-primary transition-colors text-sm"
                   >
                     {service}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

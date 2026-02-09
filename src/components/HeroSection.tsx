@@ -1,4 +1,5 @@
 import { ArrowRight, Shield, Clock, Award } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const HeroSection = () => {
   const features = [
@@ -36,13 +37,13 @@ const HeroSection = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mt-8 justify-center lg:justify-start animate-slide-in-delay-3">
-              <a href="#appointment" className="hospital-btn-secondary group">
+              <Link to="/appointment" className="hospital-btn-secondary group">
                 Book Appointment
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </a>
-              <a href="#services" className="hospital-btn-outline">
+              </Link>
+              <Link to="/services" className="hospital-btn-outline">
                 Our Services
-              </a>
+              </Link>
             </div>
 
             {/* Feature Pills */}
