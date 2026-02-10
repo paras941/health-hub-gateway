@@ -6,12 +6,13 @@ It is designed as a production-style frontend suitable for portfolio and placeme
 
 🚀 Tech Stack
 
-React (Vite)
-TypeScript
-Component-Based Architecture
-CSS
-ESLint
-Reusable UI Components
+* React (Vite)
+* TypeScript
+* Component-Based Architecture
+* CSS
+* ESLint
+* Reusable UI Components
+
 ```
 📁 Project Structure
 hospital-project/
@@ -46,16 +47,16 @@ hospital-project/
 ```
 ✨ Features
 
-Responsive hospital landing page
-Reusable UI components
-Appointment booking section
-Doctors showcase section
-Emergency call banner
-Services overview
-Statistics display section
-Clean header & footer navigation
-Modular folder structure
-Scalable architecture
+* Responsive hospital landing page
+* Reusable UI components
+* Appointment booking section
+* Doctors showcase section
+* Emergency call banner
+* Services overview
+* Statistics display section
+* Clean header & footer navigation
+* Modular folder structure
+* Scalable architecture
 
 🧩 Core Components
 Component	Purpose
@@ -68,14 +69,8 @@ AppointmentSection	Booking form section
 EmergencyBanner	Emergency contact highlight
 Footer	Footer content
 NavLink	Reusable navigation link
+
 🛠 Installation & Setup
-
-Clone the repository:
-
-git clone https://github.com/your-username/hospital-project.git
-Navigate to project folder:
-cd hospital-project
-
 Preview production build:
 npm run preview
 
