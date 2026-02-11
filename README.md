@@ -59,29 +59,25 @@ hospital-project/
 * Scalable architecture
 
 🧩 Core Components
-Component	Purpose
-Header	Navigation bar
-HeroSection	Main landing section
-ServicesSection	Hospital services display
-DoctorsSection	Doctors profile showcase
-StatsSection	Hospital statistics
-AppointmentSection	Booking form section
-EmergencyBanner	Emergency contact highlight
-Footer	Footer content
-NavLink	Reusable navigation link
-
-🛠 Installation & Setup
-Preview production build:
-npm run preview
+* Component	Purpose
+* Header	Navigation bar
+* HeroSection	Main landing section
+* ServicesSection	Hospital services display
+* DoctorsSection	Doctors profile showcase
+* StatsSection	Hospital statistics
+* AppointmentSection	Booking form section
+* EmergencyBanner	Emergency contact highlight
+* Footer	Footer content
+* NavLink	Reusable navigation link
 
 📦 Deployment Readiness
 
-To check if the project is ready for deployment:
-No console errors
-ESLint issues resolved
-npm run build runs successfully
-dist/ folder generated
-Environment variables configured (if any)
+* To check if the project is ready for deployment:
+* No console errors
+* ESLint issues resolved
+* npm run build runs successfully
+* dist/ folder generated
+* Environment variables configured (if any)
 
 You can deploy using:
 
@@ -92,21 +88,21 @@ GitHub Pages
 
 🎯 Learning Outcomes
 
-Structuring scalable React applications
-Writing reusable components
-Working with TypeScript in React
-Folder organization best practices
-Production build handling with Vite
+* Structuring scalable React applications
+* Writing reusable components
+* Working with TypeScript in React
+* Folder organization best practices
+*Production build handling with Vite
 
 📌 Future Improvements
 
-Backend integration (Node/Express)
-Authentication system
-Real appointment form submission
-Admin dashboard
-API integration
-Dark mode
-SEO optimization
+* Backend integration (Node/Express)
+* Authentication system
+* Real appointment form submission
+* Admin dashboard
+* API integration
+* Dark mode
+* SEO optimization
 
 📄 License
 
