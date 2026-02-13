@@ -81,10 +81,10 @@ hospital-project/
 
 You can deploy using:
 
-Vercel
-Netlify
-Render
-GitHub Pages
+* Vercel
+* Netlify
+* Render
+* GitHub Pages
 
 🎯 Learning Outcomes
 
