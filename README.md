@@ -5,7 +5,6 @@ This project demonstrates reusable component architecture, clean UI structuring,
 It is designed as a production-style frontend suitable for portfolio and placement interviews.
 
 🚀 Tech Stack
-
 * React (Vite)
 * TypeScript
 * Component-Based Architecture
