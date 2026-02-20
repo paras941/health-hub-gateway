@@ -57,17 +57,19 @@ hospital-project/
 * Modular folder structure
 * Scalable architecture
 
-🧩 Core Components
-* Component	Purpose
-* Header	Navigation bar
-* HeroSection	Main landing section
-* ServicesSection	Hospital services display
-* DoctorsSection	Doctors profile showcase
-* StatsSection	Hospital statistics
-* AppointmentSection	Booking form section
-* EmergencyBanner	Emergency contact highlight
-* Footer	Footer content
-* NavLink	Reusable navigation link
+## 🧩 Core Components
+
+| Component           | Purpose                               |
+|--------------------|---------------------------------------|
+| Header             | Navigation bar                        |
+| HeroSection        | Main landing section                  |
+| ServicesSection    | Hospital services display             |
+| DoctorsSection     | Doctors profile showcase              |
+| StatsSection       | Hospital statistics                   |
+| AppointmentSection | Booking form section                  |
+| EmergencyBanner    | Emergency contact highlight           |
+| Footer             | Footer content                        |
+| NavLink            | Reusable navigation link              |
 
 📦 Deployment Readiness
 
