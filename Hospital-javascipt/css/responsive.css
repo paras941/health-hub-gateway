@@ -1,34 +1,1006 @@
-@media (max-width: 768px) {
+/* ============================================
+   RESPONSIVE.CSS - Media Queries & Responsiveness
+   CityCare Hospital Website
+   ============================================ */
 
-    nav {
-        display: none;
-        flex-direction: column;
-        text-align: center;
+/* ============================================
+   EXTRA LARGE SCREENS (1400px and above)
+   ============================================ */
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1320px;
     }
-
-    nav.active {
-        display: flex;
+    
+    .hero h1 {
+        font-size: 4rem;
     }
-
-    .menu-toggle {
-        display: block;
-    }
-
-    header {
-        padding: 12px 18px;
-    }
-
-    .services, .doctors, .highlights {
-        padding: 40px 18px;
-    }
-
-    .highlight-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+    
+    .hero-image img {
+        height: 550px;
     }
 }
 
-@media (max-width: 420px) {
+/* ============================================
+   LARGE SCREENS (1200px to 1399px)
+   ============================================ */
+@media (max-width: 1399px) {
+    .hero h1 {
+        font-size: 3.2rem;
+    }
+    
+    .footer-grid {
+        gap: 30px;
+    }
+}
+
+/* ============================================
+   MEDIUM-LARGE SCREENS (992px to 1199px)
+   ============================================ */
+@media (max-width: 1199px) {
+    .service-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .doctor-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .highlight-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .hero h1 {
+        font-size: 3rem;
+    }
+    
+    .hero-inner {
+        gap: 40px;
+    }
+    
+    .contact-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .footer-about {
+        grid-column: span 2;
+    }
+}
+
+/* ============================================
+   TABLET LANDSCAPE (768px to 991px)
+   ============================================ */
+@media (max-width: 991px) {
+    :root {
+        --header-height: 70px;
+    }
+    
+    section {
+        padding: 80px 0;
+    }
+    
+    /* Header & Navigation */
+    .menu-toggle {
+        display: flex;
+    }
+    
+    nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 300px;
+        height: 100vh;
+        background: #ffffff;
+        flex-direction: column;
+        padding: 100px 30px 40px;
+        gap: 5px;
+        box-shadow: -10px 0 40px rgba(0, 0, 0, 0.15);
+        transition: right 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        overflow-y: auto;
+    }
+    
+    nav.active {
+        right: 0;
+    }
+    
+    nav a {
+        padding: 15px 20px;
+        border-radius: var(--radius-sm);
+        font-size: 1rem;
+        width: 100%;
+        justify-content: flex-start;
+    }
+    
+    nav a i {
+        width: 24px;
+    }
+    
+    .nav-cta {
+        margin-top: 15px;
+        justify-content: center;
+    }
+    
+    /* Hero Section */
+    .hero-inner {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 50px;
+    }
+    
+    .hero-content {
+        max-width: 100%;
+    }
+    
+    .hero h1 {
+        font-size: 2.8rem;
+    }
+    
+    .hero-actions {
+        justify-content: center;
+    }
+    
+    .hero-stats {
+        justify-content: center;
+    }
+    
+    .hero-image {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    
+    .hero-badge-card.card-1 {
+        left: 0;
+    }
+    
+    .hero-badge-card.card-2 {
+        right: 0;
+    }
+    
+    .scroll-indicator {
+        display: none;
+    }
+    
+    /* About Section */
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+    
+    .about-content {
+        text-align: center;
+    }
+    
+    .about-content .section-title {
+        text-align: center;
+    }
+    
+    .about-features {
+        justify-items: center;
+    }
+    
+    .about-images {
+        max-width: 450px;
+        margin: 0 auto;
+    }
+    
+    /* Services */
+    .service-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Doctors */
+    .doctor-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Highlights */
+    .highlight-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    /* Testimonials */
+    .testimonial-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Emergency */
+    .emergency-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .emergency-text {
+        flex: none;
+    }
+    
+    .emergency-actions {
+        justify-content: center;
+    }
+    
+    /* Appointment */
+    .appointment-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .appointment-info {
+        text-align: center;
+    }
+    
+    .appointment-info .section-title {
+        text-align: center;
+    }
+    
+    .appointment-benefits {
+        justify-items: center;
+    }
+    
+    /* Contact */
+    .contact-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Footer */
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+    
+    .footer-about {
+        grid-column: span 2;
+        text-align: center;
+    }
+    
+    .footer-social {
+        justify-content: center;
+    }
+}
+
+/* ============================================
+   TABLET PORTRAIT (576px to 767px)
+   ============================================ */
+@media (max-width: 767px) {
+    :root {
+        --top-bar-height: auto;
+    }
+    
+    section {
+        padding: 60px 0;
+    }
+    
+    /* Top Bar */
+    .top-bar-content {
+        flex-direction: column;
+        padding: 12px 20px;
+        gap: 10px;
+        text-align: center;
+    }
+    
+    .top-bar-left {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .top-bar-right {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    /* Hero */
+    .hero {
+        padding: 40px 0 60px;
+        min-height: auto;
+    }
+    
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+    
+    .hero-description {
+        font-size: 1rem;
+    }
+    
+    .hero-stats {
+        flex-wrap: wrap;
+        gap: 25px;
+    }
+    
+    .hero-image img {
+        height: 400px;
+    }
+    
+    .hero-badge-card {
+        padding: 12px 15px;
+    }
+    
+    .hero-badge-card.card-1 {
+        bottom: 60px;
+        left: 10px;
+    }
+    
+    .hero-badge-card.card-2 {
+        top: 40px;
+        right: 10px;
+    }
+    
+    /* Section Headers */
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .section-header {
+        margin-bottom: 40px;
+    }
+    
+    /* About */
+    .about-img-secondary {
+        width: 150px;
+        right: -10px;
+        bottom: -20px;
+    }
+    
+    .about-img-secondary img {
+        height: 150px;
+    }
+    
+    .experience-badge {
+        left: 10px;
+        padding: 15px 20px;
+    }
+    
+    .exp-number {
+        font-size: 2rem;
+    }
+    
+    .about-features {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Services */
+    .service-container {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    
+    /* Doctors */
+    .doctor-container {
+        grid-template-columns: 1fr;
+        max-width: 350px;
+        margin: 0 auto;
+    }
+    
+    /* Highlights */
+    .highlight-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .highlight-card {
+        padding: 25px 15px;
+    }
+    
+    .stat {
+        font-size: 1.8rem;
+    }
+    
+    /* Testimonials */
+    .testimonial-container {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    
+    .testimonial-card {
+        padding: 25px;
+    }
+    
+    /* Emergency */
+    .emergency-section {
+        padding: 50px 0;
+    }
+    
+    .emergency-icon {
+        width: 80px;
+        height: 80px;
+        font-size: 2rem;
+    }
+    
+    .emergency-text h2 {
+        font-size: 1.6rem;
+    }
+    
+    .emergency-phone,
+    .emergency-ambulance {
+        padding: 12px 25px;
+        font-size: 1rem;
+        width: 100%;
+        justify-content: center;
+    }
+    
+    /* Appointment */
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .appointment-form-container {
+        padding: 30px 25px;
+    }
+    
+    .appointment-benefits {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Contact */
+    .contact-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    
+    /* Map */
+    .map-section iframe {
+        height: 300px;
+    }
+    
+    /* Footer */
+    .footer-main {
+        padding: 60px 0 30px;
+    }
+    
+    .footer-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 35px;
+    }
+    
+    .footer-about {
+        grid-column: auto;
+    }
+    
+    .footer-links h4::after,
+    .footer-contact h4::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .footer-contact ul li {
+        justify-content: center;
+    }
+    
+    .newsletter-form {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .newsletter-form input {
+        border-radius: var(--radius-sm);
+        text-align: center;
+    }
+    
+    .newsletter-form button {
+        border-radius: var(--radius-sm);
+        padding: 14px;
+    }
+    
+    /* Back to Top */
+    .back-to-top {
+        bottom: 20px;
+        right: 20px;
+        width: 45px;
+        height: 45px;
+    }
+    
+    /* Modal */
+    .modal-content {
+        padding: 30px 25px;
+        margin: 10px;
+    }
+    
+    .modal-icon {
+        width: 70px;
+        height: 70px;
+        font-size: 1.8rem;
+    }
+}
+
+/* ============================================
+   MOBILE LANDSCAPE & SMALL TABLETS (480px to 575px)
+   ============================================ */
+@media (max-width: 575px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    section {
+        padding: 50px 0;
+    }
+    
+    /* Header */
+    .header-container {
+        padding: 0 15px;
+    }
+    
+    .logo i {
+        font-size: 1.8rem;
+    }
+    
+    .logo-main {
+        font-size: 1.3rem;
+    }
+    
+    .logo-sub {
+        font-size: 0.6rem;
+    }
+    
+    nav {
+        width: 100%;
+        right: -100%;
+    }
+    
+    /* Hero */
+    .hero h1 {
+        font-size: 1.9rem;
+    }
+    
+    .hero-badge {
+        font-size: 0.8rem;
+        padding: 8px 16px;
+    }
+    
+    .hero-actions {
+        flex-direction: column;
+        gap: 12px;
+    }
+    
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .hero-stats {
+        gap: 20px;
+    }
+    
+    .hero-stat-number {
+        font-size: 1.6rem;
+    }
+    
+    .hero-stat-label {
+        font-size: 0.75rem;
+    }
+    
+    .hero-image img {
+        height: 350px;
+    }
+    
+    .hero-badge-card {
+        padding: 10px 12px;
+        font-size: 0.85rem;
+    }
+    
+    .hero-badge-card i {
+        font-size: 1.2rem;
+    }
+    
+    /* Section Titles */
+    .section-title {
+        font-size: 1.7rem;
+    }
+    
+    .section-tag {
+        font-size: 0.8rem;
+        padding: 6px 12px;
+    }
+    
+    .section-description {
+        font-size: 0.95rem;
+    }
+    
+    /* About */
+    .about-img-main img {
+        height: 350px;
+    }
+    
+    .about-img-secondary {
+        display: none;
+    }
+    
+    .experience-badge {
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .about-text {
+        font-size: 0.95rem;
+    }
+    
+    /* Services */
+    .service-card {
+        padding: 25px 20px;
+    }
+    
+    .service-icon {
+        width: 70px;
+        height: 70px;
+        font-size: 1.8rem;
+    }
+    
+    .service-card h3 {
+        font-size: 1.15rem;
+    }
+    
+    /* Doctors */
+    .doctor-image img {
+        height: 250px;
+    }
+    
+    .doctor-info {
+        padding: 20px;
+    }
+    
+    .doctor-info h3 {
+        font-size: 1.1rem;
+    }
+    
+    /* Highlights */
+    .highlights {
+        padding: 60px 0;
+    }
+    
+    .highlight-card {
+        padding: 20px 12px;
+    }
+    
+    .highlight-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.3rem;
+    }
+    
+    .stat {
+        font-size: 1.6rem;
+    }
+    
+    .label {
+        font-size: 0.8rem;
+    }
+    
+    /* Testimonials */
+    .testimonial-card {
+        padding: 20px;
+    }
+    
+    .testimonial-text {
+        font-size: 0.95rem;
+    }
+    
+    .testimonial-author img {
+        width: 45px;
+        height: 45px;
+    }
+    
+    /* Emergency */
+    .emergency-icon {
+        width: 70px;
+        height: 70px;
+        font-size: 1.8rem;
+    }
+    
+    .emergency-text h2 {
+        font-size: 1.4rem;
+    }
+    
+    .emergency-actions {
+        width: 100%;
+    }
+    
+    /* Appointment */
+    .appointment-form-container {
+        padding: 25px 20px;
+    }
+    
+    .appointment-form h3 {
+        font-size: 1.3rem;
+    }
+    
+    .working-hours {
+        padding: 20px;
+    }
+    
+    .working-hours ul li {
+        font-size: 0.9rem;
+    }
+    
+    /* Contact */
+    .contact-card {
+        padding: 25px 20px;
+    }
+    
+    .contact-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.3rem;
+    }
+    
+    /* Footer */
+    .footer-logo i {
+        font-size: 1.8rem;
+    }
+    
+    .footer-links h4,
+    .footer-contact h4 {
+        font-size: 1rem;
+    }
+    
+    .footer-bottom p {
+        font-size: 0.8rem;
+    }
+}
+
+/* ============================================
+   SMALL MOBILE PHONES (320px to 479px)
+   ============================================ */
+@media (max-width: 479px) {
+    section {
+        padding: 40px 0;
+    }
+    
+    /* Hero */
+    .hero {
+        padding: 30px 0 50px;
+    }
+    
+    .hero h1 {
+        font-size: 1.6rem;
+        line-height: 1.3;
+    }
+    
+    .hero-description {
+        font-size: 0.9rem;
+    }
+    
+    .hero-image img {
+        height: 280px;
+    }
+    
+    .hero-badge-card {
+        display: none;
+    }
+    
+    .hero-stats {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    /* Sections */
+    .section-title {
+        font-size: 1.5rem;
+    }
+    
+    .section-header {
+        margin-bottom: 30px;
+    }
+    
+    /* Highlights */
+    .highlight-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+    
+    .highlight-card {
+        padding: 18px 10px;
+    }
+    
+    .stat {
+        font-size: 1.4rem;
+    }
+    
+    /* Modal */
+    .modal-content {
+        padding: 25px 20px;
+    }
+    
+    .modal-header h2 {
+        font-size: 1.3rem;
+    }
+    
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 12px 14px;
+        font-size: 0.95rem;
+    }
+}
+
+/* ============================================
+   EXTRA SMALL SCREENS (Below 320px)
+   ============================================ */
+@media (max-width: 319px) {
+    .hero h1 {
+        font-size: 1.4rem;
+    }
+    
     .highlight-grid {
         grid-template-columns: 1fr;
+    }
+    
+    .logo-sub {
+        display: none;
+    }
+}
+
+/* ============================================
+   LANDSCAPE ORIENTATION FIXES
+   ============================================ */
+@media (max-height: 500px) and (orientation: landscape) {
+    .hero {
+        min-height: auto;
+        padding: 40px 0;
+    }
+    
+    .hero-inner {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-image {
+        display: none;
+    }
+    
+    section {
+        padding: 40px 0;
+    }
+}
+
+/* ============================================
+   HIGH DPI / RETINA DISPLAYS
+   ============================================ */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .hero-image img,
+    .about-img-main img,
+    .about-img-secondary img,
+    .doctor-image img {
+        image-rendering: -webkit-optimize-contrast;
+    }
+}
+
+/* ============================================
+   PRINT STYLES
+   ============================================ */
+@media print {
+    .top-bar,
+    .site-header,
+    .hero-bg-shapes,
+    .scroll-indicator,
+    .back-to-top,
+    .modal,
+    .toast,
+    nav,
+    .menu-toggle,
+    .footer-social,
+    .newsletter-form,
+    .map-section {
+        display: none !important;
+    }
+    
+    body {
+        color: #000;
+        background: #fff;
+    }
+    
+    .hero,
+    .highlights,
+    .emergency-section {
+        background: #f5f5f5 !important;
+        color: #000 !important;
+    }
+    
+    a {
+        text-decoration: underline;
+    }
+    
+    .service-card,
+    .doctor-card,
+    .contact-card,
+    .testimonial-card {
+        break-inside: avoid;
+    }
+}
+
+/* ============================================
+   HOVER MEDIA QUERY (Touch Devices)
+   ============================================ */
+@media (hover: none) {
+    .service-card:hover,
+    .doctor-card:hover,
+    .contact-card:hover,
+    .testimonial-card:hover,
+    .highlight-card:hover {
+        transform: none;
+    }
+    
+    .btn-primary:hover,
+    .btn-secondary:hover,
+    .btn-outline:hover {
+        transform: none;
+    }
+    
+    .doctor-social {
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.8);
+    }
+}
+
+/* ============================================
+   DARK MODE SUPPORT (System Preference)
+   ============================================ */
+@media (prefers-color-scheme: dark) {
+    /* Uncomment below to enable dark mode based on system preference */
+    /*
+    :root {
+        --bg-primary: #0f172a;
+        --bg-secondary: #1e293b;
+        --bg-tertiary: #334155;
+        --text-dark: #f1f5f9;
+        --text-light: #94a3b8;
+    }
+    
+    .site-header {
+        background: rgba(15, 23, 42, 0.95);
+    }
+    
+    .service-card,
+    .doctor-card,
+    .contact-card,
+    .testimonial-card,
+    .appointment-form-container {
+        background: var(--bg-secondary);
+    }
+    */
+}
+
+/* ============================================
+   REDUCED MOTION (Accessibility)
+   ============================================ */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+    
+    .float-icon,
+    .hero-badge-card,
+    .shape,
+    .pulse-animation,
+    .gradient-text {
+        animation: none !important;
+    }
+    
+    .reveal {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+/* ============================================
+   FOCUS VISIBLE (Keyboard Navigation)
+   ============================================ */
+@media (prefers-reduced-motion: no-preference) {
+    *:focus-visible {
+        outline: 3px solid var(--primary-color);
+        outline-offset: 3px;
+        transition: outline-offset 0.2s ease;
     }
 }

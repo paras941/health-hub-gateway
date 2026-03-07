@@ -1,126 +1,780 @@
-header {
-    background-color: #0b5ed7;
-    color: white;
+/* ============================================
+   THEME.CSS - Colors, Gradients & Visual Design
+   CityCare Hospital Website
+   ============================================ */
+
+/* Color Variables */
+:root {
+    /* Primary Colors */
+    --primary-color: #0066cc;
+    --primary-dark: #004d99;
+    --primary-light: #3399ff;
+    --primary-gradient: linear-gradient(135deg, #0066cc 0%, #00b4d8 100%);
+    
+    /* Secondary Colors */
+    --secondary-color: #10b981;
+    --secondary-dark: #059669;
+    --secondary-light: #34d399;
+    
+    /* Accent Colors */
+    --accent-color: #f59e0b;
+    --accent-dark: #d97706;
+    --accent-light: #fbbf24;
+    
+    /* Emergency/Alert Colors */
+    --emergency-color: #ef4444;
+    --emergency-dark: #dc2626;
+    --emergency-light: #f87171;
+    --emergency-gradient: linear-gradient(135deg, #ef4444 0%, #f97316 100%);
+    
+    /* Neutral Colors */
+    --text-dark: #1a1a2e;
+    --text-light: #64748b;
+    --text-muted: #94a3b8;
+    
+    /* Background Colors */
+    --bg-primary: #ffffff;
+    --bg-secondary: #f8fafc;
+    --bg-tertiary: #f1f5f9;
+    --bg-dark: #0f172a;
+    --bg-dark-secondary: #1e293b;
+    
+    /* Gradient Backgrounds */
+    --gradient-hero: linear-gradient(135deg, #0066cc 0%, #00b4d8 50%, #10b981 100%);
+    --gradient-section: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+    --gradient-card: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+    --gradient-glass: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+}
+
+/* Preloader Theme */
+.preloader {
+    background: var(--gradient-hero);
+}
+
+.loader i {
+    color: #ffffff;
+}
+
+.loader .pulse {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+/* Top Bar Theme */
+.top-bar {
+    background: var(--bg-dark);
+    color: #ffffff;
+}
+
+.top-bar a {
+    color: #ffffff;
+}
+
+.top-bar a:hover {
+    color: var(--accent-color);
+}
+
+.social-links a {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+}
+
+.social-links a:hover {
+    background: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+/* Header Theme */
+.site-header {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+}
+
+.site-header.scrolled {
+    background: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.12);
+}
+
+.logo i {
+    color: var(--primary-color);
+}
+
+.logo-main {
+    color: var(--text-dark);
+}
+
+.logo-sub {
+    color: var(--text-light);
+}
+
+.menu-toggle span {
+    background: var(--text-dark);
 }
 
 nav a {
-    color: white;
-    font-weight: bold;
-    padding: 8px 2px;
-    opacity: 0.95;
-    transition: opacity 180ms ease, transform 180ms ease;
+    color: var(--text-dark);
 }
 
 nav a:hover {
-    opacity: 1;
-    transform: translateY(-1px);
+    color: var(--primary-color);
+    background: rgba(0, 102, 204, 0.05);
 }
 
-nav a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 2px;
-    height: 2px;
-    width: 100%;
-    background: rgba(255, 255, 255, 0.85);
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 200ms ease;
+nav a.active {
+    color: var(--primary-color);
 }
 
-nav a:hover::after {
-    transform: scaleX(1);
+nav a::before {
+    background: var(--primary-color);
 }
 
+.nav-cta {
+    background: var(--primary-gradient);
+    color: #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 102, 204, 0.3);
+}
+
+.nav-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(0, 102, 204, 0.4);
+}
+
+/* Hero Section Theme */
 .hero {
-    background: linear-gradient(to right, #0b5ed7, #5bc0de);
-    color: white;
+    background: var(--gradient-hero);
+    color: #ffffff;
 }
 
-/* Hero animated accents */
-.hero::before,
-.hero::after {
-    content: "";
-    position: absolute;
-    border-radius: 999px;
-    filter: blur(22px);
-    opacity: 0.65;
-    pointer-events: none;
-    animation: floaty 7s ease-in-out infinite;
+.shape-1 {
+    background: rgba(255, 255, 255, 0.2);
 }
 
-.hero::before {
-    width: 320px;
-    height: 320px;
-    left: -120px;
-    top: -120px;
-    background: rgba(255, 255, 255, 0.22);
+.shape-2 {
+    background: rgba(16, 185, 129, 0.3);
 }
 
-.hero::after {
-    width: 420px;
-    height: 420px;
-    right: -160px;
-    bottom: -180px;
-    background: rgba(255, 193, 7, 0.20);
-    animation-delay: -1.8s;
+.shape-3 {
+    background: rgba(245, 158, 11, 0.2);
 }
 
-@keyframes floaty {
-    0%, 100% { transform: translate(0, 0) scale(1); }
-    50% { transform: translate(10px, 14px) scale(1.04); }
-}
-
-button {
-    padding: 10px 20px;
-    border: none;
-    background-color: #ffc107;
-    cursor: pointer;
-    border-radius: 5px;
-    font-weight: 800;
-    transition: transform 180ms ease, box-shadow 180ms ease, filter 180ms ease;
-}
-
-button:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 10px 24px rgba(0,0,0,0.16);
-    filter: brightness(1.03);
-}
-
-button:active {
-    transform: translateY(0);
+.float-icon {
+    color: rgba(255, 255, 255, 0.3);
 }
 
 .hero-badge {
-    background: rgba(255, 255, 255, 0.16);
-    border: 1px solid rgba(255, 255, 255, 0.24);
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
 }
 
-.card, .doctor-card {
-    background-color: #f8f9fa;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+.hero-badge i {
+    color: var(--accent-color);
 }
 
-.card:hover, .doctor-card:hover {
-    box-shadow: 0 14px 30px rgba(0,0,0,0.14);
+.gradient-text {
+    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #ffffff 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.btn-primary {
+    background: var(--accent-color);
+    color: var(--text-dark);
+    box-shadow: 0 4px 20px rgba(245, 158, 11, 0.4);
+}
+
+.btn-primary:hover {
+    background: var(--accent-dark);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(245, 158, 11, 0.5);
+}
+
+.btn-primary::before {
+    background: var(--accent-light);
+}
+
+.btn-secondary {
+    background: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.25);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.btn-secondary::before {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+
+.btn-outline:hover {
+    background: var(--primary-color);
+    color: #ffffff;
+}
+
+.btn-outline::before {
+    background: var(--primary-color);
+}
+
+.hero-stat-number {
+    color: var(--accent-color);
+}
+
+.hero-image-bg {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.hero-badge-card {
+    background: #ffffff;
+    color: var(--text-dark);
+}
+
+.hero-badge-card i {
+    color: var(--primary-color);
+}
+
+.card-1 {
+    background: linear-gradient(135deg, #ffffff 0%, #f0fdf4 100%);
+}
+
+.card-1 i {
+    color: var(--secondary-color);
+}
+
+.card-2 {
+    background: linear-gradient(135deg, #ffffff 0%, #eff6ff 100%);
+}
+
+.scroll-indicator {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* About Section Theme */
+.about-section {
+    background: var(--bg-primary);
+}
+
+.experience-badge {
+    background: var(--primary-gradient);
+    color: #ffffff;
+}
+
+.section-tag {
+    background: rgba(0, 102, 204, 0.1);
+    color: var(--primary-color);
+}
+
+.section-tag i {
+    color: var(--primary-color);
+}
+
+.section-title {
+    color: var(--text-dark);
+}
+
+.feature-item i {
+    color: var(--secondary-color);
+}
+
+/* Services Section Theme */
+.services {
+    background: var(--bg-secondary);
+}
+
+.service-card {
+    background: #ffffff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.service-card:hover {
+    box-shadow: 0 20px 40px rgba(0, 102, 204, 0.15);
+}
+
+.service-card::before {
+    background: var(--primary-gradient);
+}
+
+.service-icon {
+    background: linear-gradient(135deg, rgba(0, 102, 204, 0.1) 0%, rgba(16, 185, 129, 0.1) 100%);
+    color: var(--primary-color);
+}
+
+.service-card:hover .service-icon {
+    background: var(--primary-gradient);
+    color: #ffffff;
+}
+
+.service-card h3 {
+    color: var(--text-dark);
+}
+
+.service-link {
+    color: var(--primary-color);
+}
+
+.service-link:hover {
+    color: var(--primary-dark);
+}
+
+/* Doctors Section Theme */
+.doctors {
+    background: var(--bg-primary);
+}
+
+.doctor-card {
+    background: #ffffff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.doctor-card:hover {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+.doctor-social {
+    background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.7) 100%);
+}
+
+.doctor-social a {
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    backdrop-filter: blur(10px);
+}
+
+.doctor-social a:hover {
+    background: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+.doctor-specialty {
+    color: var(--primary-color);
+}
+
+.doctor-rating i {
+    color: var(--accent-color);
+}
+
+/* Highlights Section Theme */
+.highlights {
+    background: var(--gradient-hero);
+    background-image: url('https://images.unsplash.com/photo-1538108149393-fbbd81895907?w=1920&h=600&fit=crop');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.highlights-overlay {
+    background: linear-gradient(135deg, rgba(0, 102, 204, 0.92) 0%, rgba(0, 180, 216, 0.92) 50%, rgba(16, 185, 129, 0.92) 100%);
 }
 
 .highlight-card {
-    background: rgba(248, 249, 250, 0.9);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.10);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #ffffff;
 }
 
 .highlight-card:hover {
-    box-shadow: 0 14px 30px rgba(0,0,0,0.14);
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.4);
 }
 
-.emergency {
-    background-color: #dc3545;
-    color: white;
+.highlight-icon {
+    background: rgba(255, 255, 255, 0.15);
+    color: var(--accent-color);
 }
 
-footer {
-    background-color: #343a40;
-    color: white;
+.stat {
+    color: #ffffff;
+}
+
+/* Testimonials Section Theme */
+.testimonials {
+    background: var(--bg-secondary);
+}
+
+.testimonial-card {
+    background: #ffffff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.testimonial-card:hover {
+    box-shadow: 0 15px 40px rgba(0, 102, 204, 0.12);
+    border-color: rgba(0, 102, 204, 0.1);
+}
+
+.testimonial-rating i {
+    color: var(--accent-color);
+}
+
+.testimonial-text {
+    color: var(--text-dark);
+}
+
+.testimonial-author strong {
+    color: var(--text-dark);
+}
+
+/* Emergency Section Theme */
+.emergency-section {
+    background: var(--emergency-gradient);
+    color: #ffffff;
+}
+
+.emergency-icon {
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+}
+
+.emergency-tag {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.emergency-phone {
+    background: #ffffff;
+    color: var(--emergency-color);
+}
+
+.emergency-phone:hover {
+    background: #f0f0f0;
+}
+
+.emergency-ambulance {
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+}
+
+.emergency-ambulance:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Appointment Section Theme */
+.appointment-section {
+    background: var(--bg-primary);
+}
+
+.benefit-item i {
+    color: var(--secondary-color);
+}
+
+.working-hours {
+    background: var(--bg-tertiary);
+}
+
+.working-hours h4 i {
+    color: var(--primary-color);
+}
+
+.emergency-hours {
+    color: var(--emergency-color);
+    font-weight: 600;
+}
+
+.appointment-form-container {
+    background: #ffffff;
+    box-shadow: 0 10px 40px rgba(0, 102, 204, 0.12);
+    border: 1px solid rgba(0, 102, 204, 0.08);
+}
+
+.appointment-form h3 {
+    color: var(--text-dark);
+}
+
+.form-group label {
+    color: var(--text-dark);
+}
+
+.form-group label i {
+    color: var(--primary-color);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    background: var(--bg-secondary);
+    color: var(--text-dark);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--primary-color);
+    background: #ffffff;
+}
+
+/* Contact Section Theme */
+.contact-section {
+    background: var(--bg-secondary);
+}
+
+.contact-card {
+    background: #ffffff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.contact-card:hover {
+    box-shadow: 0 15px 40px rgba(0, 102, 204, 0.12);
+}
+
+.contact-icon {
+    background: linear-gradient(135deg, rgba(0, 102, 204, 0.1) 0%, rgba(16, 185, 129, 0.1) 100%);
+    color: var(--primary-color);
+}
+
+.contact-card:hover .contact-icon {
+    background: var(--primary-gradient);
+    color: #ffffff;
+}
+
+.contact-card h3 {
+    color: var(--text-dark);
+}
+
+.contact-link {
+    color: var(--primary-color);
+}
+
+/* Footer Theme */
+.site-footer {
+    background: var(--bg-dark);
+    color: #ffffff;
+}
+
+.footer-main {
+    background: var(--bg-dark);
+}
+
+.footer-logo i {
+    color: var(--primary-light);
+}
+
+.footer-logo .logo-main {
+    color: #ffffff;
+}
+
+.footer-logo .logo-sub {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-social a {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+}
+
+.footer-social a:hover {
+    background: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+.footer-links h4,
+.footer-contact h4 {
+    color: #ffffff;
+}
+
+.footer-links h4::after,
+.footer-contact h4::after {
+    background: var(--primary-color);
+}
+
+.footer-links ul li a:hover {
+    color: var(--primary-light);
+}
+
+.newsletter-form input {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+}
+
+.newsletter-form input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.newsletter-form button {
+    background: var(--primary-color);
+    color: #ffffff;
+}
+
+.newsletter-form button:hover {
+    background: var(--primary-light);
+}
+
+.footer-bottom {
+    background: var(--bg-dark-secondary);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.made-with i {
+    color: var(--emergency-color);
+}
+
+/* Back to Top Button Theme */
+.back-to-top {
+    background: var(--primary-gradient);
+    color: #ffffff;
+    box-shadow: 0 4px 20px rgba(0, 102, 204, 0.4);
+}
+
+.back-to-top:hover {
+    box-shadow: 0 8px 30px rgba(0, 102, 204, 0.5);
+}
+
+/* Modal Theme */
+.modal {
+    background: rgba(15, 23, 42, 0.8);
+    backdrop-filter: blur(10px);
+}
+
+.modal-content {
+    background: #ffffff;
+}
+
+.modal-icon {
+    background: var(--primary-gradient);
+    color: #ffffff;
+}
+
+.modal-header h2 {
+    color: var(--text-dark);
+}
+
+.close {
+    background: var(--bg-tertiary);
+    color: var(--text-dark);
+}
+
+.close:hover {
+    background: var(--emergency-color);
+    color: #ffffff;
+}
+
+/* Toast Theme */
+.toast {
+    background: var(--secondary-color);
+    color: #ffffff;
+    box-shadow: 0 4px 20px rgba(16, 185, 129, 0.4);
+}
+
+.toast.error {
+    background: var(--emergency-color);
+    box-shadow: 0 4px 20px rgba(239, 68, 68, 0.4);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-tertiary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-dark);
+}
+
+/* Selection Color */
+::selection {
+    background: var(--primary-color);
+    color: #ffffff;
+}
+
+::-moz-selection {
+    background: var(--primary-color);
+    color: #ffffff;
+}
+
+/* Focus Styles for Accessibility */
+*:focus-visible {
+    outline: 3px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+/* Link Hover Animations */
+a {
+    position: relative;
+}
+
+/* Card Hover Glow Effect */
+.service-card::after,
+.doctor-card::after,
+.contact-card::after,
+.testimonial-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(0, 102, 204, 0.08) 0%, transparent 60%);
+}
+
+.service-card:hover::after,
+.doctor-card:hover::after,
+.contact-card:hover::after,
+.testimonial-card:hover::after {
+    opacity: 1;
+}
+
+/* Gradient Text Animation */
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.gradient-text {
+    background-size: 200% auto;
+    animation: gradientShift 4s ease infinite;
+}
+
+/* Shimmer Effect for Loading States */
+@keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+}
+
+.loading {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+}
+
+/* Button Press Effect */
+.btn-primary:active,
+.btn-secondary:active,
+.btn-outline:active {
+    transform: scale(0.98);
+}
+
+/* Image Loading Placeholder */
+img {
+    background: linear-gradient(135deg, #f0f0f0 0%, #e0e0e0 100%);
+}
+
+/* Smooth Color Transitions */
+.service-card,
+.doctor-card,
+.contact-card,
+.testimonial-card,
+.highlight-card {
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
