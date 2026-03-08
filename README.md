@@ -241,7 +241,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ### ⭐ Star this repo if you found it helpful!
 
-Made with ❤️ by [Your Name](https://github.com/yourusername)
+Made with ❤️ by [Paras Rawat](https://github.com/paras941)
 
 </div>
 * Authentication system
