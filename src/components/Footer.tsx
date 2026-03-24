@@ -37,7 +37,7 @@ const Footer = () => {
                 <span className="text-2xl font-bold">+</span>
               </div>
               <div>
-                <h3 className="text-xl font-bold font-sans">MediCare</h3>
+                <h3 className="text-xl font-bold font-sans">CityCare</h3>
                 <p className="text-xs text-white/60">Multi-Specialty Hospital</p>
               </div>
             </Link>
@@ -100,19 +100,19 @@ const Footer = () => {
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                 <span className="text-white/70 text-sm">
-                  123 Healthcare Blvd, Medical City, MC 12345
+                  123 Health Street, Medical City
                 </span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-primary flex-shrink-0" />
-                <a href="tel:+15551234567" className="text-white/70 text-sm hover:text-primary transition-colors">
-                  +1 (555) 123-4567
+                <a href="tel:+919876543210" className="text-white/70 text-sm hover:text-primary transition-colors">
+                  +91 98765 43210
                 </a>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-primary flex-shrink-0" />
-                <a href="mailto:info@medicare.com" className="text-white/70 text-sm hover:text-primary transition-colors">
-                  info@medicare.com
+                <a href="mailto:info@citycarehospital.com" className="text-white/70 text-sm hover:text-primary transition-colors">
+                  info@citycarehospital.com
                 </a>
               </li>
               <li className="flex items-center gap-3">
@@ -130,7 +130,7 @@ const Footer = () => {
       <div className="border-t border-white/10">
         <div className="hospital-container py-6">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-white/60">
-            <p>© 2024 MediCare Hospital. All rights reserved.</p>
+            <p>© 2026 CityCare Hospital. All rights reserved.</p>
             <div className="flex gap-6">
               <a href="#" className="hover:text-primary transition-colors">Privacy Policy</a>
               <a href="#" className="hover:text-primary transition-colors">Terms of Service</a>

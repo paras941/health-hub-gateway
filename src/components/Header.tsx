@@ -45,7 +45,7 @@ const Header = () => {
               <span className="text-2xl font-bold text-primary-foreground">+</span>
             </div>
             <div>
-              <h1 className="text-xl font-bold text-hospital-navy font-sans">MediCare</h1>
+              <h1 className="text-xl font-bold text-hospital-navy font-sans">CityCare</h1>
               <p className="text-xs text-muted-foreground">Multi-Specialty Hospital</p>
             </div>
           </Link>

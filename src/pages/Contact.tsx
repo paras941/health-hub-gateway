@@ -27,7 +27,7 @@ const Contact = () => {
                 {[
                   { icon: MapPin, title: 'Address', text: '123 Healthcare Blvd, Medical City, MC 12345' },
                   { icon: Phone, title: 'Phone', text: '+1 (555) 123-4567' },
-                  { icon: Mail, title: 'Email', text: 'info@medicare.com' },
+                  { icon: Mail, title: 'Email', text: 'info@citycarehospital.com' },
                   { icon: Clock, title: 'Working Hours', text: 'Mon - Sat: 8:00 AM - 8:00 PM' },
                 ].map((item, i) => (
                   <div key={i} className="hospital-card flex items-start gap-4">

@@ -64,7 +64,7 @@ const ServicesSection = () => {
   return (
     <section id="services" className="hospital-section bg-background">
       <div className="hospital-container">
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 reveal">
           <span className="text-primary font-semibold text-sm uppercase tracking-wider">
             What We Offer
           </span>
@@ -79,7 +79,7 @@ const ServicesSection = () => {
           {services.map((service, index) => (
             <div 
               key={index} 
-              className="hospital-card group cursor-pointer !p-0 overflow-hidden"
+              className="hospital-card interactive-card reveal group cursor-pointer !p-0 overflow-hidden"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="relative h-44 overflow-hidden">
@@ -105,7 +105,7 @@ const ServicesSection = () => {
           ))}
         </div>
 
-        <div className="text-center mt-12">
+        <div className="text-center mt-12 reveal">
           <a href="#" className="hospital-btn-outline">
             View All Services
           </a>

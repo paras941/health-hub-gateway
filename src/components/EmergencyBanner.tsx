@@ -11,7 +11,7 @@ const EmergencyBanner = () => {
         <div className="flex items-center gap-2 bg-white/20 rounded-full px-4 py-1">
           <Phone className="w-4 h-4" />
           <a href="tel:911" className="font-bold text-lg">
-            Call: 911
+            Call: 108
           </a>
         </div>
       </div>

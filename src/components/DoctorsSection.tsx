@@ -35,7 +35,7 @@ const DoctorsSection = () => {
   return (
     <section id="doctors" className="hospital-section bg-hospital-cream">
       <div className="hospital-container">
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 reveal">
           <span className="text-primary font-semibold text-sm uppercase tracking-wider">
             Meet Our Experts
           </span>
@@ -48,7 +48,7 @@ const DoctorsSection = () => {
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {doctors.map((doctor, index) => (
-            <div key={index} className="doctor-card group">
+            <div key={index} className="doctor-card interactive-card reveal group">
               <div className="relative overflow-hidden">
                 <img
                   src={doctor.image}
@@ -85,7 +85,7 @@ const DoctorsSection = () => {
           ))}
         </div>
 
-        <div className="text-center mt-12">
+        <div className="text-center mt-12 reveal">
           <a href="#" className="hospital-btn-outline">
             View All Doctors
           </a>

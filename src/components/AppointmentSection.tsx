@@ -37,7 +37,7 @@ const AppointmentSection = () => {
       <div className="hospital-container relative">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           
-          <div>
+          <div className="reveal">
             <span className="text-primary font-semibold text-sm uppercase tracking-wider">
               Book Your Visit
             </span>
@@ -87,7 +87,7 @@ const AppointmentSection = () => {
           </div>
 
           
-          <div className="hospital-card !p-8">
+          <div className="hospital-card interactive-card reveal !p-8">
             <form onSubmit={handleSubmit} className="space-y-5">
               <div className="grid sm:grid-cols-2 gap-4">
                 <div>

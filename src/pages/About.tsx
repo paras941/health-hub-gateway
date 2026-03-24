@@ -19,7 +19,7 @@ const About = () => {
               </span>
               <h2 className="section-title mt-2">Who We Are</h2>
               <p className="section-subtitle">
-                MediCare is a leading multi-specialty hospital committed to providing 
+                CityCare is a leading multi-specialty hospital committed to providing 
                 world-class healthcare with compassion and excellence.
               </p>
             </div>
@@ -37,7 +37,7 @@ const About = () => {
                   25+ Years of Trusted Healthcare
                 </h3>
                 <p className="text-muted-foreground leading-relaxed mb-6">
-                  Since our founding, MediCare has grown into a premier healthcare institution 
+                  Since our founding, CityCare has grown into a premier healthcare institution 
                   serving over 50,000 patients annually. Our state-of-the-art facility combines 
                   advanced medical technology with a patient-first approach.
                 </p>

@@ -210,6 +210,24 @@
     color: hsl(var(--primary));
   }
 
+  .interactive-card {
+    @apply relative overflow-hidden;
+  }
+
+  .interactive-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 50% 50%, hsl(var(--primary) / 0.14), transparent 60%);
+    opacity: 0;
+    transition: opacity 0.35s ease;
+    pointer-events: none;
+  }
+
+  .interactive-card:hover::after {
+    opacity: 1;
+  }
+
   .floating-element {
     animation: float 6s ease-in-out infinite;
   }
@@ -286,4 +304,15 @@
 .animate-slide-in-delay-3 {
   animation: slideInUp 0.6s ease-out 0.3s forwards;
   opacity: 0;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+
+.reveal.in-view {
+  opacity: 1;
+  transform: translateY(0);
 }
