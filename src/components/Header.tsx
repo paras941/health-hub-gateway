@@ -1,10 +1,15 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Phone, Menu, X, Clock, MapPin } from 'lucide-react';
+import { Phone, Menu, X, Clock, MapPin, Heart } from 'lucide-react';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [heartPulseKey, setHeartPulseKey] = useState(0);
   const location = useLocation();
+
+  useEffect(() => {
+    setHeartPulseKey((prev) => prev + 1);
+  }, [location.pathname]);
 
   const navLinks = [
     { name: 'Home', href: '/' },
@@ -26,12 +31,12 @@ const Header = () => {
             </div>
             <div className="hidden sm:flex items-center gap-2 text-muted-foreground">
               <MapPin className="w-4 h-4 text-hospital-teal" />
-              <span>123 Healthcare Blvd, Medical City</span>
+              <span>123 Health Street, Medical City</span>
             </div>
           </div>
           <div className="flex items-center gap-2 font-semibold text-hospital-teal">
             <Phone className="w-4 h-4" />
-            <span>+1 (555) 123-4567</span>
+            <span>+91 98765 43210</span>
           </div>
         </div>
       </div>
@@ -59,6 +64,9 @@ const Header = () => {
                 className={`nav-link ${location.pathname === link.href ? 'text-primary' : ''}`}
               >
                 {link.name}
+                {location.pathname === link.href ? (
+                  <Heart key={`${link.href}-${heartPulseKey}`} className="nav-heart-burst" />
+                ) : null}
               </Link>
             ))}
           </div>
@@ -87,10 +95,13 @@ const Header = () => {
                 <Link
                   key={link.name}
                   to={link.href}
-                  className={`px-4 py-3 rounded-lg hover:bg-muted transition-colors font-medium ${location.pathname === link.href ? 'bg-muted text-primary' : ''}`}
+                  className={`relative px-4 py-3 rounded-lg hover:bg-muted transition-colors font-medium ${location.pathname === link.href ? 'bg-muted text-primary' : ''}`}
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {link.name}
+                  {location.pathname === link.href ? (
+                    <Heart key={`m-${link.href}-${heartPulseKey}`} className="nav-heart-burst" />
+                  ) : null}
                 </Link>
               ))}
               <Link to="/appointment" className="hospital-btn-secondary text-center mt-2" onClick={() => setIsMenuOpen(false)}>

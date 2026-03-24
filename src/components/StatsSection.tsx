@@ -2,10 +2,10 @@ import { Users, Award, Building, Heart } from 'lucide-react';
 
 const StatsSection = () => {
   const stats = [
-    { icon: Users, value: '50,000+', label: 'Happy Patients' },
-    { icon: Award, value: '150+', label: 'Expert Doctors' },
-    { icon: Building, value: '25+', label: 'Years of Service' },
-    { icon: Heart, value: '98%', label: 'Success Rate' },
+    { icon: Users, count: 25000, suffix: '+', label: 'Happy Patients' },
+    { icon: Award, count: 50, suffix: '+', label: 'Expert Specialists' },
+    { icon: Building, count: 15, suffix: '+', label: 'Years Excellence' },
+    { icon: Heart, count: 24, suffix: '', label: 'Hours Emergency' },
   ];
 
   return (
@@ -25,7 +25,10 @@ const StatsSection = () => {
               <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-white/20 backdrop-blur-sm flex items-center justify-center">
                 <stat.icon className="w-8 h-8" />
               </div>
-              <p className="text-3xl md:text-4xl font-bold mb-1">{stat.value}</p>
+              <p className="text-3xl md:text-4xl font-bold mb-1">
+                <span data-count={stat.count} className="counter-value">0</span>
+                {stat.suffix}
+              </p>
               <p className="text-white/80 text-sm md:text-base">{stat.label}</p>
             </div>
           ))}

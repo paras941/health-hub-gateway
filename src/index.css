@@ -8,11 +8,11 @@
 @layer base {
   :root {
     
-    --primary: 187 69% 42%;
+    --primary: 210 100% 40%;
     --primary-foreground: 0 0% 100%;
     
     
-    --secondary: 12 76% 61%;
+    --secondary: 160 84% 39%;
     --secondary-foreground: 0 0% 100%;
     
     
@@ -29,8 +29,8 @@
     --muted: 200 15% 94%;
     --muted-foreground: 210 12% 45%;
     
-    --accent: 187 35% 92%;
-    --accent-foreground: 187 69% 32%;
+    --accent: 38 92% 50%;
+    --accent-foreground: 210 24% 16%;
     
     
     --destructive: 0 72% 51%;
@@ -39,27 +39,27 @@
     
     --border: 200 18% 88%;
     --input: 200 18% 88%;
-    --ring: 187 69% 42%;
+    --ring: 210 100% 40%;
     --radius: 0.75rem;
     
     
-    --hospital-teal: 187 69% 42%;
-    --hospital-teal-light: 187 50% 95%;
-    --hospital-coral: 12 76% 61%;
-    --hospital-navy: 210 45% 22%;
+    --hospital-teal: 210 100% 40%;
+    --hospital-teal-light: 200 33% 96%;
+    --hospital-coral: 38 92% 50%;
+    --hospital-navy: 230 27% 14%;
     --hospital-cream: 40 30% 96%;
     --hospital-success: 152 69% 40%;
     
     
-    --gradient-hero: linear-gradient(135deg, hsl(187 69% 42%) 0%, hsl(210 45% 32%) 100%);
+    --gradient-hero: linear-gradient(135deg, #0066cc 0%, #00b4d8 50%, #10b981 100%);
     --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(200 20% 98%) 100%);
-    --gradient-emergency: linear-gradient(90deg, hsl(0 72% 51%) 0%, hsl(0 72% 45%) 100%);
+    --gradient-emergency: linear-gradient(135deg, #ef4444 0%, #f97316 100%);
     
     
     --shadow-sm: 0 2px 8px -2px hsl(210 24% 16% / 0.08);
     --shadow-md: 0 8px 24px -8px hsl(210 24% 16% / 0.12);
     --shadow-lg: 0 16px 48px -12px hsl(210 24% 16% / 0.15);
-    --shadow-glow: 0 0 40px hsl(187 69% 42% / 0.2);
+    --shadow-glow: 0 0 40px hsl(210 100% 40% / 0.2);
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -134,13 +134,13 @@
 
   .hospital-btn-secondary {
     @apply inline-flex items-center justify-center px-8 py-4 rounded-xl font-semibold transition-all duration-300;
-    background: hsl(var(--hospital-coral));
-    color: white;
+    background: hsl(var(--accent));
+    color: hsl(var(--accent-foreground));
     box-shadow: var(--shadow-md);
   }
 
   .hospital-btn-secondary:hover {
-    box-shadow: 0 8px 30px hsl(12 76% 61% / 0.35);
+    box-shadow: 0 8px 30px hsl(var(--accent) / 0.4);
     transform: translateY(-2px);
   }
 
@@ -193,6 +193,7 @@
   .nav-link {
     @apply relative px-4 py-2 font-medium transition-colors duration-300;
     color: hsl(var(--foreground));
+    border-radius: 999px;
   }
 
   .nav-link::after {
@@ -208,6 +209,18 @@
 
   .nav-link:hover {
     color: hsl(var(--primary));
+    background: hsl(var(--primary) / 0.06);
+  }
+
+  .nav-heart-burst {
+    position: absolute;
+    top: -12px;
+    right: -10px;
+    color: #ef4444;
+    width: 14px;
+    height: 14px;
+    animation: heartBurst 650ms ease forwards;
+    pointer-events: none;
   }
 
   .interactive-card {
@@ -274,6 +287,12 @@
 @keyframes pulse {
   0%, 100% { opacity: 1; }
   50% { opacity: 0.7; }
+}
+
+@keyframes heartBurst {
+  0% { opacity: 0; transform: translateY(8px) scale(0.6); }
+  25% { opacity: 1; transform: translateY(0) scale(1.15); }
+  100% { opacity: 0; transform: translateY(-16px) scale(0.8); }
 }
 
 @keyframes slideInUp {
