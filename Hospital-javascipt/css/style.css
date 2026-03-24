@@ -1,9 +1,5 @@
-/* ============================================
-   STYLE.CSS - Base Layout & Structure
-   CityCare Hospital Website
-   ============================================ */
 
-/* CSS Custom Properties */
+
 :root {
     --font-primary: 'Poppins', sans-serif;
     --font-heading: 'Playfair Display', serif;
@@ -28,7 +24,7 @@
     --radius-full: 9999px;
 }
 
-/* Reset & Base Styles */
+
 *,
 *::before,
 *::after {
@@ -66,14 +62,14 @@ ul {
     list-style: none;
 }
 
-/* Container */
+
 .container {
     max-width: var(--max-width);
     margin: 0 auto;
     padding: 0 20px;
 }
 
-/* Preloader */
+
 .preloader {
     position: fixed;
     top: 0;
@@ -117,7 +113,7 @@ ul {
     50% { transform: scale(1.2); opacity: 0; }
 }
 
-/* Top Bar */
+
 .top-bar {
     height: var(--top-bar-height);
     display: flex;
@@ -174,7 +170,7 @@ ul {
     transition: var(--transition-fast);
 }
 
-/* Header */
+
 .site-header {
     position: sticky;
     top: 0;
@@ -302,7 +298,7 @@ nav a.active::before {
     transition: var(--transition-fast);
 }
 
-/* Hero Section */
+
 .hero {
     min-height: calc(100vh - var(--header-height) - var(--top-bar-height));
     position: relative;
@@ -496,7 +492,7 @@ nav a.active::before {
     opacity: 0.8;
 }
 
-/* Hero Image */
+
 .hero-image {
     position: relative;
 }
@@ -583,7 +579,7 @@ nav a.active::before {
     60% { transform: translateX(-50%) translateY(-5px); }
 }
 
-/* Section Styles */
+
 section {
     padding: 100px 0;
 }
@@ -619,7 +615,7 @@ section {
     line-height: 1.8;
 }
 
-/* About Section */
+
 .about-section {
     overflow: hidden;
 }
@@ -723,7 +719,7 @@ section {
     font-size: 1.1rem;
 }
 
-/* Services Section */
+
 .services {
     position: relative;
 }
@@ -809,7 +805,7 @@ section {
     transform: translateX(5px);
 }
 
-/* Doctors Section */
+
 .doctors {
     position: relative;
 }
@@ -914,7 +910,7 @@ section {
     margin-top: 40px;
 }
 
-/* Highlights Section */
+
 .highlights {
     position: relative;
     padding: 80px 0;
@@ -973,7 +969,7 @@ section {
     opacity: 0.9;
 }
 
-/* Testimonials Section */
+
 .testimonials {
     position: relative;
 }
@@ -1029,7 +1025,7 @@ section {
     opacity: 0.7;
 }
 
-/* Emergency Section */
+
 .emergency-section {
     position: relative;
     padding: 60px 0;
@@ -1109,7 +1105,7 @@ section {
     transform: scale(1.05);
 }
 
-/* Appointment Section */
+
 .appointment-section {
     position: relative;
 }
@@ -1178,7 +1174,7 @@ section {
     border-bottom: none;
 }
 
-/* Appointment Form */
+
 .appointment-form-container {
     padding: 40px;
     border-radius: var(--radius-lg);
@@ -1241,7 +1237,7 @@ section {
     font-size: 1.05rem;
 }
 
-/* Contact Section */
+
 .contact-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -1299,7 +1295,7 @@ section {
     transform: translateX(5px);
 }
 
-/* Map Section */
+
 .map-section {
     padding: 0;
     line-height: 0;
@@ -1314,7 +1310,7 @@ section {
     filter: grayscale(0%);
 }
 
-/* Footer */
+
 .site-footer {
     padding: 0;
 }
@@ -1471,7 +1467,7 @@ section {
     50% { transform: scale(1.2); }
 }
 
-/* Back to Top Button */
+
 .back-to-top {
     position: fixed;
     bottom: 30px;
@@ -1502,7 +1498,7 @@ section {
     transform: translateY(-5px);
 }
 
-/* Modal Styles */
+
 .modal {
     display: none;
     position: fixed;
@@ -1590,7 +1586,7 @@ section {
     padding: 14px;
 }
 
-/* Toast Notification */
+
 .toast {
     position: fixed;
     bottom: 30px;
@@ -1623,7 +1619,7 @@ section {
     font-size: 1.3rem;
 }
 
-/* Scroll Reveal Animation */
+
 .reveal {
     opacity: 0;
     transform: translateY(30px);
@@ -1639,7 +1635,7 @@ section {
     transition-delay: var(--stagger-delay, 0ms);
 }
 
-/* Reduced Motion */
+
 @media (prefers-reduced-motion: reduce) {
     html {
         scroll-behavior: auto;

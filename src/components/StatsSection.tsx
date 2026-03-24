@@ -10,7 +10,7 @@ const StatsSection = () => {
 
   return (
     <section className="py-12 bg-hero-gradient relative overflow-hidden">
-      {/* Pattern Overlay */}
+      
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0" style={{ 
           backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)',

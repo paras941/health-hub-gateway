@@ -29,14 +29,14 @@ const AppointmentSection = () => {
 
   return (
     <section id="appointment" className="hospital-section bg-background relative overflow-hidden">
-      {/* Background Pattern */}
+      
       <div className="absolute inset-0 opacity-50">
         <div className="absolute top-0 right-0 w-1/2 h-full bg-hero-gradient opacity-5" />
       </div>
 
       <div className="hospital-container relative">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Info Side */}
+          
           <div>
             <span className="text-primary font-semibold text-sm uppercase tracking-wider">
               Book Your Visit
@@ -86,7 +86,7 @@ const AppointmentSection = () => {
             </div>
           </div>
 
-          {/* Form Side */}
+          
           <div className="hospital-card !p-8">
             <form onSubmit={handleSubmit} className="space-y-5">
               <div className="grid sm:grid-cols-2 gap-4">

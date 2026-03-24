@@ -16,7 +16,7 @@ const Header = () => {
 
   return (
     <header className="sticky top-0 z-50 bg-card/95 backdrop-blur-md border-b border-border">
-      {/* Top Bar */}
+      
       <div className="bg-hospital-teal-light border-b border-border">
         <div className="hospital-container py-2 flex flex-wrap justify-between items-center text-sm">
           <div className="flex items-center gap-6">
@@ -36,10 +36,10 @@ const Header = () => {
         </div>
       </div>
 
-      {/* Main Navigation */}
+      
       <nav className="hospital-container py-4">
         <div className="flex items-center justify-between">
-          {/* Logo */}
+          
           <Link to="/" className="flex items-center gap-3">
             <div className="w-12 h-12 rounded-xl bg-hero-gradient flex items-center justify-center">
               <span className="text-2xl font-bold text-primary-foreground">+</span>
@@ -50,7 +50,7 @@ const Header = () => {
             </div>
           </Link>
 
-          {/* Desktop Navigation */}
+          
           <div className="hidden md:flex items-center gap-2">
             {navLinks.map((link) => (
               <Link
@@ -63,14 +63,14 @@ const Header = () => {
             ))}
           </div>
 
-          {/* CTA Button */}
+          
           <div className="hidden md:block">
             <Link to="/appointment" className="hospital-btn-secondary text-sm py-3 px-6">
               Book Appointment
             </Link>
           </div>
 
-          {/* Mobile Menu Button */}
+          
           <button
             className="md:hidden p-2 rounded-lg hover:bg-muted transition-colors"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -79,7 +79,7 @@ const Header = () => {
           </button>
         </div>
 
-        {/* Mobile Navigation */}
+        
         {isMenuOpen && (
           <div className="md:hidden mt-4 pb-4 border-t border-border pt-4 animate-slide-in">
             <div className="flex flex-col gap-2">

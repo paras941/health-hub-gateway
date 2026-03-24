@@ -1,52 +1,49 @@
-/* ============================================
-   THEME.CSS - Colors, Gradients & Visual Design
-   CityCare Hospital Website
-   ============================================ */
 
-/* Color Variables */
+
+
 :root {
-    /* Primary Colors */
+    
     --primary-color: #0066cc;
     --primary-dark: #004d99;
     --primary-light: #3399ff;
     --primary-gradient: linear-gradient(135deg, #0066cc 0%, #00b4d8 100%);
     
-    /* Secondary Colors */
+    
     --secondary-color: #10b981;
     --secondary-dark: #059669;
     --secondary-light: #34d399;
     
-    /* Accent Colors */
+    
     --accent-color: #f59e0b;
     --accent-dark: #d97706;
     --accent-light: #fbbf24;
     
-    /* Emergency/Alert Colors */
+    
     --emergency-color: #ef4444;
     --emergency-dark: #dc2626;
     --emergency-light: #f87171;
     --emergency-gradient: linear-gradient(135deg, #ef4444 0%, #f97316 100%);
     
-    /* Neutral Colors */
+    
     --text-dark: #1a1a2e;
     --text-light: #64748b;
     --text-muted: #94a3b8;
     
-    /* Background Colors */
+    
     --bg-primary: #ffffff;
     --bg-secondary: #f8fafc;
     --bg-tertiary: #f1f5f9;
     --bg-dark: #0f172a;
     --bg-dark-secondary: #1e293b;
     
-    /* Gradient Backgrounds */
+    
     --gradient-hero: linear-gradient(135deg, #0066cc 0%, #00b4d8 50%, #10b981 100%);
     --gradient-section: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
     --gradient-card: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
     --gradient-glass: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
 }
 
-/* Preloader Theme */
+
 .preloader {
     background: var(--gradient-hero);
 }
@@ -59,7 +56,7 @@
     background: rgba(255, 255, 255, 0.5);
 }
 
-/* Top Bar Theme */
+
 .top-bar {
     background: var(--bg-dark);
     color: #ffffff;
@@ -83,7 +80,7 @@
     transform: translateY(-2px);
 }
 
-/* Header Theme */
+
 .site-header {
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(20px);
@@ -140,7 +137,7 @@ nav a::before {
     box-shadow: 0 6px 25px rgba(0, 102, 204, 0.4);
 }
 
-/* Hero Section Theme */
+
 .hero {
     background: var(--gradient-hero);
     color: #ffffff;
@@ -259,7 +256,7 @@ nav a::before {
     color: rgba(255, 255, 255, 0.8);
 }
 
-/* About Section Theme */
+
 .about-section {
     background: var(--bg-primary);
 }
@@ -286,7 +283,7 @@ nav a::before {
     color: var(--secondary-color);
 }
 
-/* Services Section Theme */
+
 .services {
     background: var(--bg-secondary);
 }
@@ -326,7 +323,7 @@ nav a::before {
     color: var(--primary-dark);
 }
 
-/* Doctors Section Theme */
+
 .doctors {
     background: var(--bg-primary);
 }
@@ -363,7 +360,7 @@ nav a::before {
     color: var(--accent-color);
 }
 
-/* Highlights Section Theme */
+
 .highlights {
     background: var(--gradient-hero);
     background-image: url('https://images.unsplash.com/photo-1538108149393-fbbd81895907?w=1920&h=600&fit=crop');
@@ -398,7 +395,7 @@ nav a::before {
     color: #ffffff;
 }
 
-/* Testimonials Section Theme */
+
 .testimonials {
     background: var(--bg-secondary);
 }
@@ -426,7 +423,7 @@ nav a::before {
     color: var(--text-dark);
 }
 
-/* Emergency Section Theme */
+
 .emergency-section {
     background: var(--emergency-gradient);
     color: #ffffff;
@@ -460,7 +457,7 @@ nav a::before {
     background: rgba(255, 255, 255, 0.3);
 }
 
-/* Appointment Section Theme */
+
 .appointment-section {
     background: var(--bg-primary);
 }
@@ -514,7 +511,7 @@ nav a::before {
     background: #ffffff;
 }
 
-/* Contact Section Theme */
+
 .contact-section {
     background: var(--bg-secondary);
 }
@@ -546,7 +543,7 @@ nav a::before {
     color: var(--primary-color);
 }
 
-/* Footer Theme */
+
 .site-footer {
     background: var(--bg-dark);
     color: #ffffff;
@@ -619,7 +616,7 @@ nav a::before {
     color: var(--emergency-color);
 }
 
-/* Back to Top Button Theme */
+
 .back-to-top {
     background: var(--primary-gradient);
     color: #ffffff;
@@ -630,7 +627,7 @@ nav a::before {
     box-shadow: 0 8px 30px rgba(0, 102, 204, 0.5);
 }
 
-/* Modal Theme */
+
 .modal {
     background: rgba(15, 23, 42, 0.8);
     backdrop-filter: blur(10px);
@@ -659,7 +656,7 @@ nav a::before {
     color: #ffffff;
 }
 
-/* Toast Theme */
+
 .toast {
     background: var(--secondary-color);
     color: #ffffff;
@@ -671,7 +668,7 @@ nav a::before {
     box-shadow: 0 4px 20px rgba(239, 68, 68, 0.4);
 }
 
-/* Custom Scrollbar */
+
 ::-webkit-scrollbar {
     width: 10px;
 }
@@ -689,7 +686,7 @@ nav a::before {
     background: var(--primary-dark);
 }
 
-/* Selection Color */
+
 ::selection {
     background: var(--primary-color);
     color: #ffffff;
@@ -700,18 +697,18 @@ nav a::before {
     color: #ffffff;
 }
 
-/* Focus Styles for Accessibility */
+
 *:focus-visible {
     outline: 3px solid var(--primary-color);
     outline-offset: 2px;
 }
 
-/* Link Hover Animations */
+
 a {
     position: relative;
 }
 
-/* Card Hover Glow Effect */
+
 .service-card::after,
 .doctor-card::after,
 .contact-card::after,
@@ -733,7 +730,7 @@ a {
     opacity: 1;
 }
 
-/* Gradient Text Animation */
+
 @keyframes gradientShift {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
@@ -745,7 +742,7 @@ a {
     animation: gradientShift 4s ease infinite;
 }
 
-/* Shimmer Effect for Loading States */
+
 @keyframes shimmer {
     0% { background-position: -200% 0; }
     100% { background-position: 200% 0; }
@@ -757,19 +754,19 @@ a {
     animation: shimmer 1.5s infinite;
 }
 
-/* Button Press Effect */
+
 .btn-primary:active,
 .btn-secondary:active,
 .btn-outline:active {
     transform: scale(0.98);
 }
 
-/* Image Loading Placeholder */
+
 img {
     background: linear-gradient(135deg, #f0f0f0 0%, #e0e0e0 100%);
 }
 
-/* Smooth Color Transitions */
+
 .service-card,
 .doctor-card,
 .contact-card,

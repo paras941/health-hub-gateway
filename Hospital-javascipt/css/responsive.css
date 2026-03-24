@@ -1,11 +1,6 @@
-/* ============================================
-   RESPONSIVE.CSS - Media Queries & Responsiveness
-   CityCare Hospital Website
-   ============================================ */
 
-/* ============================================
-   EXTRA LARGE SCREENS (1400px and above)
-   ============================================ */
+
+
 @media (min-width: 1400px) {
     .container {
         max-width: 1320px;
@@ -20,9 +15,7 @@
     }
 }
 
-/* ============================================
-   LARGE SCREENS (1200px to 1399px)
-   ============================================ */
+
 @media (max-width: 1399px) {
     .hero h1 {
         font-size: 3.2rem;
@@ -33,9 +26,7 @@
     }
 }
 
-/* ============================================
-   MEDIUM-LARGE SCREENS (992px to 1199px)
-   ============================================ */
+
 @media (max-width: 1199px) {
     .service-container {
         grid-template-columns: repeat(3, 1fr);
@@ -70,9 +61,7 @@
     }
 }
 
-/* ============================================
-   TABLET LANDSCAPE (768px to 991px)
-   ============================================ */
+
 @media (max-width: 991px) {
     :root {
         --header-height: 70px;
@@ -82,7 +71,7 @@
         padding: 80px 0;
     }
     
-    /* Header & Navigation */
+    
     .menu-toggle {
         display: flex;
     }
@@ -123,7 +112,7 @@
         justify-content: center;
     }
     
-    /* Hero Section */
+    
     .hero-inner {
         grid-template-columns: 1fr;
         text-align: center;
@@ -163,7 +152,7 @@
         display: none;
     }
     
-    /* About Section */
+    
     .about-grid {
         grid-template-columns: 1fr;
         gap: 50px;
@@ -186,27 +175,27 @@
         margin: 0 auto;
     }
     
-    /* Services */
+    
     .service-container {
         grid-template-columns: repeat(2, 1fr);
     }
     
-    /* Doctors */
+    
     .doctor-container {
         grid-template-columns: repeat(2, 1fr);
     }
     
-    /* Highlights */
+    
     .highlight-grid {
         grid-template-columns: repeat(3, 1fr);
     }
     
-    /* Testimonials */
+    
     .testimonial-container {
         grid-template-columns: repeat(2, 1fr);
     }
     
-    /* Emergency */
+    
     .emergency-content {
         flex-direction: column;
         text-align: center;
@@ -220,7 +209,7 @@
         justify-content: center;
     }
     
-    /* Appointment */
+    
     .appointment-grid {
         grid-template-columns: 1fr;
         gap: 40px;
@@ -238,12 +227,12 @@
         justify-items: center;
     }
     
-    /* Contact */
+    
     .contact-grid {
         grid-template-columns: repeat(2, 1fr);
     }
     
-    /* Footer */
+    
     .footer-grid {
         grid-template-columns: 1fr 1fr;
         gap: 40px;
@@ -259,9 +248,7 @@
     }
 }
 
-/* ============================================
-   TABLET PORTRAIT (576px to 767px)
-   ============================================ */
+
 @media (max-width: 767px) {
     :root {
         --top-bar-height: auto;
@@ -271,7 +258,7 @@
         padding: 60px 0;
     }
     
-    /* Top Bar */
+    
     .top-bar-content {
         flex-direction: column;
         padding: 12px 20px;
@@ -289,7 +276,7 @@
         gap: 10px;
     }
     
-    /* Hero */
+    
     .hero {
         padding: 40px 0 60px;
         min-height: auto;
@@ -326,7 +313,7 @@
         right: 10px;
     }
     
-    /* Section Headers */
+    
     .section-title {
         font-size: 2rem;
     }
@@ -335,7 +322,7 @@
         margin-bottom: 40px;
     }
     
-    /* About */
+    
     .about-img-secondary {
         width: 150px;
         right: -10px;
@@ -359,21 +346,21 @@
         grid-template-columns: 1fr;
     }
     
-    /* Services */
+    
     .service-container {
         grid-template-columns: 1fr;
         max-width: 400px;
         margin: 0 auto;
     }
     
-    /* Doctors */
+    
     .doctor-container {
         grid-template-columns: 1fr;
         max-width: 350px;
         margin: 0 auto;
     }
     
-    /* Highlights */
+    
     .highlight-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -386,7 +373,7 @@
         font-size: 1.8rem;
     }
     
-    /* Testimonials */
+    
     .testimonial-container {
         grid-template-columns: 1fr;
         max-width: 500px;
@@ -397,7 +384,7 @@
         padding: 25px;
     }
     
-    /* Emergency */
+    
     .emergency-section {
         padding: 50px 0;
     }
@@ -420,7 +407,7 @@
         justify-content: center;
     }
     
-    /* Appointment */
+    
     .form-row {
         grid-template-columns: 1fr;
     }
@@ -433,19 +420,19 @@
         grid-template-columns: 1fr;
     }
     
-    /* Contact */
+    
     .contact-grid {
         grid-template-columns: 1fr;
         max-width: 400px;
         margin: 0 auto;
     }
     
-    /* Map */
+    
     .map-section iframe {
         height: 300px;
     }
     
-    /* Footer */
+    
     .footer-main {
         padding: 60px 0 30px;
     }
@@ -485,7 +472,7 @@
         padding: 14px;
     }
     
-    /* Back to Top */
+    
     .back-to-top {
         bottom: 20px;
         right: 20px;
@@ -493,7 +480,7 @@
         height: 45px;
     }
     
-    /* Modal */
+    
     .modal-content {
         padding: 30px 25px;
         margin: 10px;
@@ -506,9 +493,7 @@
     }
 }
 
-/* ============================================
-   MOBILE LANDSCAPE & SMALL TABLETS (480px to 575px)
-   ============================================ */
+
 @media (max-width: 575px) {
     .container {
         padding: 0 15px;
@@ -518,7 +503,7 @@
         padding: 50px 0;
     }
     
-    /* Header */
+    
     .header-container {
         padding: 0 15px;
     }
@@ -540,7 +525,7 @@
         right: -100%;
     }
     
-    /* Hero */
+    
     .hero h1 {
         font-size: 1.9rem;
     }
@@ -586,7 +571,7 @@
         font-size: 1.2rem;
     }
     
-    /* Section Titles */
+    
     .section-title {
         font-size: 1.7rem;
     }
@@ -600,7 +585,7 @@
         font-size: 0.95rem;
     }
     
-    /* About */
+    
     .about-img-main img {
         height: 350px;
     }
@@ -619,7 +604,7 @@
         font-size: 0.95rem;
     }
     
-    /* Services */
+    
     .service-card {
         padding: 25px 20px;
     }
@@ -634,7 +619,7 @@
         font-size: 1.15rem;
     }
     
-    /* Doctors */
+    
     .doctor-image img {
         height: 250px;
     }
@@ -647,7 +632,7 @@
         font-size: 1.1rem;
     }
     
-    /* Highlights */
+    
     .highlights {
         padding: 60px 0;
     }
@@ -670,7 +655,7 @@
         font-size: 0.8rem;
     }
     
-    /* Testimonials */
+    
     .testimonial-card {
         padding: 20px;
     }
@@ -684,7 +669,7 @@
         height: 45px;
     }
     
-    /* Emergency */
+    
     .emergency-icon {
         width: 70px;
         height: 70px;
@@ -699,7 +684,7 @@
         width: 100%;
     }
     
-    /* Appointment */
+    
     .appointment-form-container {
         padding: 25px 20px;
     }
@@ -716,7 +701,7 @@
         font-size: 0.9rem;
     }
     
-    /* Contact */
+    
     .contact-card {
         padding: 25px 20px;
     }
@@ -727,7 +712,7 @@
         font-size: 1.3rem;
     }
     
-    /* Footer */
+    
     .footer-logo i {
         font-size: 1.8rem;
     }
@@ -742,15 +727,13 @@
     }
 }
 
-/* ============================================
-   SMALL MOBILE PHONES (320px to 479px)
-   ============================================ */
+
 @media (max-width: 479px) {
     section {
         padding: 40px 0;
     }
     
-    /* Hero */
+    
     .hero {
         padding: 30px 0 50px;
     }
@@ -777,7 +760,7 @@
         gap: 15px;
     }
     
-    /* Sections */
+    
     .section-title {
         font-size: 1.5rem;
     }
@@ -786,7 +769,7 @@
         margin-bottom: 30px;
     }
     
-    /* Highlights */
+    
     .highlight-grid {
         grid-template-columns: 1fr 1fr;
         gap: 12px;
@@ -800,7 +783,7 @@
         font-size: 1.4rem;
     }
     
-    /* Modal */
+    
     .modal-content {
         padding: 25px 20px;
     }
@@ -817,9 +800,7 @@
     }
 }
 
-/* ============================================
-   EXTRA SMALL SCREENS (Below 320px)
-   ============================================ */
+
 @media (max-width: 319px) {
     .hero h1 {
         font-size: 1.4rem;
@@ -834,9 +815,7 @@
     }
 }
 
-/* ============================================
-   LANDSCAPE ORIENTATION FIXES
-   ============================================ */
+
 @media (max-height: 500px) and (orientation: landscape) {
     .hero {
         min-height: auto;
@@ -860,9 +839,7 @@
     }
 }
 
-/* ============================================
-   HIGH DPI / RETINA DISPLAYS
-   ============================================ */
+
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
     .hero-image img,
     .about-img-main img,
@@ -872,9 +849,7 @@
     }
 }
 
-/* ============================================
-   PRINT STYLES
-   ============================================ */
+
 @media print {
     .top-bar,
     .site-header,
@@ -915,9 +890,7 @@
     }
 }
 
-/* ============================================
-   HOVER MEDIA QUERY (Touch Devices)
-   ============================================ */
+
 @media (hover: none) {
     .service-card:hover,
     .doctor-card:hover,
@@ -939,37 +912,13 @@
     }
 }
 
-/* ============================================
-   DARK MODE SUPPORT (System Preference)
-   ============================================ */
+
 @media (prefers-color-scheme: dark) {
-    /* Uncomment below to enable dark mode based on system preference */
-    /*
-    :root {
-        --bg-primary: #0f172a;
-        --bg-secondary: #1e293b;
-        --bg-tertiary: #334155;
-        --text-dark: #f1f5f9;
-        --text-light: #94a3b8;
-    }
     
-    .site-header {
-        background: rgba(15, 23, 42, 0.95);
-    }
     
-    .service-card,
-    .doctor-card,
-    .contact-card,
-    .testimonial-card,
-    .appointment-form-container {
-        background: var(--bg-secondary);
-    }
-    */
 }
 
-/* ============================================
-   REDUCED MOTION (Accessibility)
-   ============================================ */
+
 @media (prefers-reduced-motion: reduce) {
     *,
     *::before,
@@ -994,9 +943,7 @@
     }
 }
 
-/* ============================================
-   FOCUS VISIBLE (Keyboard Navigation)
-   ============================================ */
+
 @media (prefers-reduced-motion: no-preference) {
     *:focus-visible {
         outline: 3px solid var(--primary-color);

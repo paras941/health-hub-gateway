@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonials | CityCare Multi-Specialty Hospital</title>
+    <meta name="description" content="Patient testimonials and stories from CityCare Hospital.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <div id="preloader" class="preloader"><div class="loader"><div class="pulse"></div><i class="fa-solid fa-heart-pulse"></i></div></div>
+
+    <div class="top-bar">
+        <div class="top-bar-content">
+            <div class="top-bar-left">
+                <span><i class="fa-solid fa-clock"></i> 24/7 Emergency Services</span>
+                <span><i class="fa-solid fa-location-dot"></i> 123 Health Street, Medical City</span>
+            </div>
+            <div class="top-bar-right"><a href="tel:+919876543210"><i class="fa-solid fa-phone-volume"></i> +91 98765 43210</a></div>
+        </div>
+    </div>
+
+    <header class="site-header">
+        <div class="header-container">
+            <div class="logo"><i class="fa-solid fa-hospital"></i><div class="logo-text"><span class="logo-main">CityCare</span><span class="logo-sub">Multi-Specialty Hospital</span></div></div>
+            <div class="menu-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></div>
+            <nav>
+                <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+                <a href="about.html"><i class="fa-solid fa-circle-info"></i> About</a>
+                <a href="services.html"><i class="fa-solid fa-stethoscope"></i> Services</a>
+                <a href="doctors.html"><i class="fa-solid fa-user-doctor"></i> Doctors</a>
+                <a href="testimonials.html" class="active"><i class="fa-solid fa-comments"></i> Testimonials</a>
+                <a href="contact.html"><i class="fa-solid fa-envelope"></i> Contact</a>
+                <button id="openModal" class="nav-cta"><i class="fa-solid fa-calendar-check"></i> Book Now</button>
+            </nav>
+        </div>
+    </header>
+
+    <section id="testimonials" class="testimonials" style="padding-top: 180px;">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag reveal"><i class="fa-solid fa-quote-left"></i> Testimonials</span>
+                <h1 class="section-title reveal">What Our Patients Say</h1>
+                <p class="section-description reveal">Real patient experiences that reflect our commitment to quality care.</p>
+            </div>
+            <div class="testimonial-container">
+                <div class="testimonial-card reveal" data-stagger>
+                    <div class="testimonial-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <p class="testimonial-text">"The care I received was exceptional. The doctors were highly skilled and the staff was very supportive throughout my treatment."</p>
+                    <div class="testimonial-author"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop" alt="Amit Kumar"><div><strong>Amit Kumar</strong><span>Heart Surgery Patient</span></div></div>
+                </div>
+                <div class="testimonial-card reveal" data-stagger>
+                    <div class="testimonial-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <p class="testimonial-text">"The pediatric team was warm and professional. They made a difficult phase much easier for our family."</p>
+                    <div class="testimonial-author"><img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=80&h=80&fit=crop" alt="Sunita Patel"><div><strong>Sunita Patel</strong><span>Parent of Pediatric Patient</span></div></div>
+                </div>
+                <div class="testimonial-card reveal" data-stagger>
+                    <div class="testimonial-rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <p class="testimonial-text">"After surgery and rehab here, I am finally pain-free. The care standards were excellent from day one."</p>
+                    <div class="testimonial-author"><img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=80&h=80&fit=crop" alt="Raghav Singh"><div><strong>Raghav Singh</strong><span>Orthopedic Patient</span></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer"><div class="footer-bottom"><div class="container"><p>© 2026 CityCare Hospital. All Rights Reserved.</p></div></div></footer>
+
+    <button id="backToTop" class="back-to-top" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+    <div id="appointmentModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="appointmentTitle">
+        <div class="modal-content" role="document">
+            <div class="modal-header"><div class="modal-icon"><i class="fa-solid fa-calendar-check"></i></div><h2 id="appointmentTitle">Book Your Appointment</h2><p>Fill in the details below and we will get back to you shortly</p><span class="close" aria-label="Close modal">&times;</span></div>
+            <form id="appointmentForm">
+                <div class="form-group"><label for="name"><i class="fa-solid fa-user"></i> Full Name</label><input type="text" id="name" required></div>
+                <div class="form-group"><label for="email"><i class="fa-solid fa-envelope"></i> Email Address</label><input type="email" id="email" required></div>
+                <div class="form-group"><label for="phone"><i class="fa-solid fa-phone"></i> Phone Number</label><input type="tel" id="phone" required></div>
+                <button type="submit" class="btn-primary btn-block"><i class="fa-solid fa-paper-plane"></i> Submit Request</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="toast" class="toast"><div class="toast-content"><i class="fa-solid fa-circle-check"></i><span class="toast-message">Appointment Booked Successfully!</span></div></div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

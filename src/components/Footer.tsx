@@ -30,7 +30,7 @@ const Footer = () => {
     <footer id="contact" className="bg-hospital-navy text-white">
       <div className="hospital-container py-16">
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-12">
-          {/* About Column */}
+          
           <div>
             <Link to="/" className="flex items-center gap-3 mb-6">
               <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center">
@@ -59,7 +59,7 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Quick Links */}
+          
           <div>
             <h4 className="text-lg font-bold mb-6 font-sans">Quick Links</h4>
             <ul className="space-y-3">
@@ -76,7 +76,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Services */}
+          
           <div>
             <h4 className="text-lg font-bold mb-6 font-sans">Our Services</h4>
             <ul className="space-y-3">
@@ -93,7 +93,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Contact Info */}
+          
           <div>
             <h4 className="text-lg font-bold mb-6 font-sans">Contact Us</h4>
             <ul className="space-y-4">
@@ -126,7 +126,7 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Bottom Bar */}
+      
       <div className="border-t border-white/10">
         <div className="hospital-container py-6">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-white/60">

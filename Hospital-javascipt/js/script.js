@@ -1,34 +1,17 @@
-/* ============================================
-   SCRIPT.JS - Interactive Features & Animations
-   CityCare Hospital Website
-   ============================================ */
-
-// Wait for DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', function() {
-    
-    // ============================================
-    // PRELOADER
-    // ============================================
     const preloader = document.getElementById('preloader');
     
     window.addEventListener('load', function() {
         setTimeout(() => {
             preloader.classList.add('hidden');
-            // Trigger initial animations after preloader
             document.body.classList.add('loaded');
         }, 500);
     });
-    
-    // Fallback: Hide preloader after 3 seconds max
     setTimeout(() => {
         if (preloader) {
             preloader.classList.add('hidden');
         }
     }, 3000);
-
-    // ============================================
-    // MOBILE NAVIGATION
-    // ============================================
     const menuToggle = document.querySelector('.menu-toggle');
     const nav = document.querySelector('nav');
     const navLinks = document.querySelectorAll('nav a');
@@ -40,8 +23,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     menuToggle.addEventListener('click', toggleMenu);
-    
-    // Close menu when clicking a link
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
             if (nav.classList.contains('active')) {
@@ -49,8 +30,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-    
-    // Close menu when clicking outside
     document.addEventListener('click', (e) => {
         if (nav.classList.contains('active') && 
             !nav.contains(e.target) && 
@@ -58,25 +37,17 @@ document.addEventListener('DOMContentLoaded', function() {
             toggleMenu();
         }
     });
-
-    // ============================================
-    // HEADER SCROLL EFFECTS
-    // ============================================
     const header = document.querySelector('.site-header');
     let lastScrollY = window.scrollY;
     let ticking = false;
     
     function updateHeader() {
         const scrollY = window.scrollY;
-        
-        // Add scrolled class for shadow
         if (scrollY > 50) {
             header.classList.add('scrolled');
         } else {
             header.classList.remove('scrolled');
         }
-        
-        // Hide/show header on scroll (mobile only)
         if (window.innerWidth <= 991) {
             if (scrollY > lastScrollY && scrollY > 200) {
                 header.style.transform = 'translateY(-100%)';
@@ -97,10 +68,6 @@ document.addEventListener('DOMContentLoaded', function() {
             ticking = true;
         }
     }, { passive: true });
-
-    // ============================================
-    // ACTIVE NAV LINK ON SCROLL
-    // ============================================
     const sections = document.querySelectorAll('section[id]');
     
     function setActiveLink() {
@@ -120,10 +87,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     window.addEventListener('scroll', setActiveLink, { passive: true });
-
-    // ============================================
-    // SMOOTH SCROLL FOR NAVIGATION
-    // ============================================
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             const href = this.getAttribute('href');
@@ -139,17 +102,12 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-
-    // ============================================
-    // SCROLL REVEAL ANIMATIONS
-    // ============================================
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const revealElements = document.querySelectorAll('.reveal');
     
     function onIntersect(entries, observer) {
         entries.forEach((entry, index) => {
             if (entry.isIntersecting) {
-                // Add stagger delay for elements with data-stagger
                 if (entry.target.hasAttribute('data-stagger')) {
                     const parent = entry.target.parentElement;
                     const siblings = Array.from(parent.querySelectorAll('[data-stagger]'));
@@ -172,13 +130,8 @@ document.addEventListener('DOMContentLoaded', function() {
         
         revealElements.forEach(el => revealObserver.observe(el));
     } else {
-        // Fallback for reduced motion or no IntersectionObserver
         revealElements.forEach(el => el.classList.add('in-view'));
     }
-
-    // ============================================
-    // ANIMATED COUNTERS
-    // ============================================
     function animateCounter(element) {
         const target = parseInt(element.getAttribute('data-count'), 10);
         if (!target || element.classList.contains('counted')) return;
@@ -212,8 +165,6 @@ document.addEventListener('DOMContentLoaded', function() {
         
         requestAnimationFrame(tick);
     }
-    
-    // Observe counter elements
     const counterElements = document.querySelectorAll('[data-count]');
     
     if ('IntersectionObserver' in window) {
@@ -230,10 +181,6 @@ document.addEventListener('DOMContentLoaded', function() {
     } else {
         counterElements.forEach(el => animateCounter(el));
     }
-
-    // ============================================
-    // MODAL FUNCTIONALITY
-    // ============================================
     const modal = document.getElementById('appointmentModal');
     const openModalBtns = document.querySelectorAll('#openModal, #heroOpenModal');
     const closeModalBtn = document.querySelector('.close');
@@ -241,8 +188,6 @@ document.addEventListener('DOMContentLoaded', function() {
     function openModal() {
         modal.classList.add('is-open');
         document.body.style.overflow = 'hidden';
-        
-        // Focus first input
         setTimeout(() => {
             const firstInput = modal.querySelector('input');
             if (firstInput) firstInput.focus();
@@ -261,24 +206,16 @@ document.addEventListener('DOMContentLoaded', function() {
     if (closeModalBtn) {
         closeModalBtn.addEventListener('click', closeModal);
     }
-    
-    // Close on backdrop click
     modal.addEventListener('click', (e) => {
         if (e.target === modal) {
             closeModal();
         }
     });
-    
-    // Close on Escape key
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && modal.classList.contains('is-open')) {
             closeModal();
         }
     });
-
-    // ============================================
-    // FORM VALIDATION & SUBMISSION
-    // ============================================
     const appointmentForm = document.getElementById('appointmentForm');
     const inlineForm = document.getElementById('appointmentFormInline');
     const toast = document.getElementById('toast');
@@ -328,8 +265,6 @@ document.addEventListener('DOMContentLoaded', function() {
         e.preventDefault();
         
         if (!validateForm(e.target)) return;
-        
-        // Simulate form submission
         const submitBtn = e.target.querySelector('button[type="submit"]');
         const originalText = submitBtn.innerHTML;
         
@@ -357,10 +292,6 @@ document.addEventListener('DOMContentLoaded', function() {
     if (inlineForm) {
         inlineForm.addEventListener('submit', handleFormSubmit);
     }
-
-    // ============================================
-    // NEWSLETTER FORM
-    // ============================================
     const newsletterForm = document.querySelector('.newsletter-form');
     
     if (newsletterForm) {
@@ -376,10 +307,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
-
-    // ============================================
-    // BACK TO TOP BUTTON
-    // ============================================
     const backToTopBtn = document.getElementById('backToTop');
     
     function toggleBackToTop() {
@@ -398,10 +325,6 @@ document.addEventListener('DOMContentLoaded', function() {
             behavior: 'smooth'
         });
     });
-
-    // ============================================
-    // CARD HOVER GLOW EFFECT
-    // ============================================
     const glowCards = document.querySelectorAll('.service-card, .doctor-card, .contact-card, .testimonial-card');
     
     glowCards.forEach(card => {
@@ -414,10 +337,6 @@ document.addEventListener('DOMContentLoaded', function() {
             card.style.setProperty('--mouse-y', `${y}%`);
         });
     });
-
-    // ============================================
-    // PARALLAX EFFECT FOR HERO
-    // ============================================
     const hero = document.querySelector('.hero');
     const shapes = document.querySelectorAll('.shape');
     
@@ -434,10 +353,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }, { passive: true });
     }
-
-    // ============================================
-    // TYPING EFFECT (Optional Enhancement)
-    // ============================================
     function typeWriter(element, text, speed = 50) {
         let i = 0;
         element.textContent = '';
@@ -452,20 +367,12 @@ document.addEventListener('DOMContentLoaded', function() {
         
         type();
     }
-
-    // ============================================
-    // SET MINIMUM DATE FOR APPOINTMENT
-    // ============================================
     const dateInputs = document.querySelectorAll('input[type="date"]');
     const today = new Date().toISOString().split('T')[0];
     
     dateInputs.forEach(input => {
         input.setAttribute('min', today);
     });
-
-    // ============================================
-    // IMAGE LAZY LOADING ENHANCEMENT
-    // ============================================
     const images = document.querySelectorAll('img[loading="lazy"]');
     
     if ('IntersectionObserver' in window) {
@@ -481,13 +388,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         images.forEach(img => imageObserver.observe(img));
     }
-
-    // ============================================
-    // KEYBOARD NAVIGATION ENHANCEMENT
-    // ============================================
     const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
-    
-    // Trap focus in modal when open
     modal.addEventListener('keydown', (e) => {
         if (e.key !== 'Tab') return;
         
@@ -507,21 +408,12 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
     });
-
-    // ============================================
-    // PRINT PAGE FUNCTIONALITY
-    // ============================================
     const printBtn = document.querySelector('.print-page');
     
     if (printBtn) {
         printBtn.addEventListener('click', () => window.print());
     }
-
-    // ============================================
-    // INITIALIZE AOS-LIKE ANIMATIONS
-    // ============================================
     function initAnimations() {
-        // Trigger hero animations immediately
         setTimeout(() => {
             document.querySelectorAll('.hero .reveal').forEach((el, index) => {
                 setTimeout(() => {
@@ -532,10 +424,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     initAnimations();
-
-    // ============================================
-    // PERFORMANCE: DEBOUNCE RESIZE EVENTS
-    // ============================================
     function debounce(func, wait) {
         let timeout;
         return function executedFunction(...args) {
@@ -547,28 +435,16 @@ document.addEventListener('DOMContentLoaded', function() {
             timeout = setTimeout(later, wait);
         };
     }
-    
-    // Handle resize events
     const handleResize = debounce(() => {
-        // Reset mobile menu on resize to desktop
         if (window.innerWidth > 991 && nav.classList.contains('active')) {
             toggleMenu();
         }
     }, 250);
     
     window.addEventListener('resize', handleResize);
-
-    // ============================================
-    // SERVICE WORKER REGISTRATION (PWA Support)
-    // ============================================
     if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
-            // navigator.serviceWorker.register('/sw.js')
-            //     .then(registration => console.log('SW registered'))
-            //     .catch(error => console.log('SW registration failed'));
         });
     }
-
-    // Log initialization
     console.log('🏥 CityCare Hospital website initialized successfully!');
 });

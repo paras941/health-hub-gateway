@@ -10,7 +10,7 @@ const About = () => {
       <EmergencyBanner />
       <Header />
       <main>
-        {/* About Hero */}
+        
         <section className="hospital-section bg-hospital-cream">
           <div className="hospital-container">
             <div className="text-center mb-16">

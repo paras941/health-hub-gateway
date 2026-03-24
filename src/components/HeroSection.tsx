@@ -10,7 +10,7 @@ const HeroSection = () => {
 
   return (
     <section id="home" className="relative overflow-hidden bg-hospital-cream">
-      {/* Background Pattern */}
+      
       <div className="absolute inset-0 opacity-30">
         <div className="absolute top-20 right-20 w-72 h-72 bg-primary/10 rounded-full blur-3xl floating-element" />
         <div className="absolute bottom-20 left-20 w-96 h-96 bg-secondary/10 rounded-full blur-3xl floating-element" style={{ animationDelay: '-3s' }} />
@@ -18,7 +18,7 @@ const HeroSection = () => {
 
       <div className="hospital-container relative">
         <div className="grid lg:grid-cols-2 gap-12 items-center py-16 md:py-24">
-          {/* Content */}
+          
           <div className="text-center lg:text-left">
             <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-6 animate-slide-in">
               <span className="w-2 h-2 bg-primary rounded-full pulse-element" />
@@ -46,7 +46,7 @@ const HeroSection = () => {
               </Link>
             </div>
 
-            {/* Feature Pills */}
+            
             <div className="flex flex-wrap gap-4 mt-10 justify-center lg:justify-start">
               {features.map((feature, index) => (
                 <div 
@@ -60,7 +60,7 @@ const HeroSection = () => {
             </div>
           </div>
 
-          {/* Hero Image/Illustration */}
+          
           <div className="relative hidden lg:block">
             <div className="relative z-10">
               <div className="w-full h-[500px] rounded-3xl overflow-hidden shadow-2xl">
@@ -71,7 +71,7 @@ const HeroSection = () => {
                 />
               </div>
               
-              {/* Floating Cards */}
+              
               <div className="absolute -bottom-6 -left-6 bg-card rounded-2xl p-4 shadow-lg animate-slide-in-delay-2">
                 <div className="flex items-center gap-3">
                   <div className="w-12 h-12 rounded-full bg-accent flex items-center justify-center">
